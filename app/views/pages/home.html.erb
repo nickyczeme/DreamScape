@@ -1,2 +1,7 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Dreams</h1>
+<p>Choose a mode</p>
+<ul>
+  <% @modes.each do |mode|%>
+  <li><%=mode.name%></li>
+  <%end%>
+</ul>
