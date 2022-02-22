@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+
 Mode.create(name: "horror")
 User.create(email: "bzoani@itba.edu.ar", first_name: "Barbie", last_name: "Zoani", password: "123456")
 Dream.create(title: "Scary", description: "jdsklfdsjfdsjkfdsfds", intensity: 1, price: 1.5, user: User.first, mode: Mode.first)
