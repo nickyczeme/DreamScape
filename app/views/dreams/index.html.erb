@@ -1,8 +1,7 @@
-
-<h1>Dreams</h1>
-
-<div class="cards">
-  <% @dreams.each do |dream| %>
+<div class="container">
+  <h1>Dreams</h1>
+  <div class="cards">
+    <% @dreams.each do |dream| %>
     <%= link_to dream_path(dream) do %>
       <div class='card-trip'>
         <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
@@ -17,8 +16,6 @@
         </div>
       </div>
     <% end %>
-<%# <%= link_to "Back to modes", root_path %> 
   <% end %>
-
+  </div>
 </div>
-
