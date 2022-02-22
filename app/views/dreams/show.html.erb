@@ -1,4 +1,29 @@
-<h2><%=@dream.title%></h2>
-<p><%=@dream.price%></p>
-<p><%=@dream.description%></p>
-<%= link_to "Back to dreams", dreams_path(mode: @dream.mode.id) %>
+
+<div class='container-dream'>
+  <h1>Book <%=@dream.title%></h1>
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <%# <%= cl_image_tag @dream.photo.key, height: 300, width: 400, crop: :fill %>
+  <div class='dream-info'>
+    <div class='dream-info-mode'>
+      <h3>Mode</h3>
+      <p><%= @dream.mode.name %></p>
+    </div>
+    <div class='dream-info-intensity'>
+      <h3>Intensity</h3>
+      <p><% @dream.intensity.to_i.times do%><i class="fa-solid fa-circle"></i><% end %></p>
+    </div>
+    <div class='dream-info-price'>
+      <h3>Price</h3>
+      <p><%= @dream.price %></p>
+    </div>
+    <div class='dream-info-rating'>
+      <h3>Overall Rating</h3>
+      <p><%= @dream.overall_rating %></p>
+    </div>
+  </div>
+  <div>
+    <h3>Description</h3>
+    <p><%= @dream.description %></p>
+  </div>
+
+</div>
