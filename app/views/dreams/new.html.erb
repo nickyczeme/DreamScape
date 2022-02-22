@@ -7,9 +7,8 @@
       <%= f.input :intensity, collection: 1..5, label: 'Select intensity level', error: 'Intensity is mandatory, please specify one' %>
       <%= f.input :price, label: 'Enter the price of the dream', error: 'Price is mandatory, please specify one' %>
       <%= f.input :photo, as: :file %>
-      <%= f.association :mode %>
+      <%= f.association :mode, include_blank: false %>
       <%= f.submit %>
     <% end %>
   </div>
 </div>
-

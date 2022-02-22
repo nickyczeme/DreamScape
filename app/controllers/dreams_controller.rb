@@ -20,7 +20,6 @@ class DreamsController < ApplicationController
 
   def create
     @dream = Dream.new(dream_params)
-    @dream.mode = @mode
     @dream.user = current_user
     if @dream.save
       redirect_to dream_path(@dream)
