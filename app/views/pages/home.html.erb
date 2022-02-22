@@ -1,6 +1,6 @@
 
 <%= render "pages/components/banner"%>
-<div class = 'cards'>
+<div class = 'cards-home'>
   <% @modes.each do |mode|%>
   <div class="card-list"><%= link_to mode.name, dreams_path(mode: mode.id) %></div>
   <%end%>
