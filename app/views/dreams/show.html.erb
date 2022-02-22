@@ -1,0 +1,4 @@
+<h2><%=@dream.title%></h2>
+<p><%=@dream.price%></p>
+<p><%=@dream.description%></p>
+<%= link_to "Back to dreams", dreams_path(mode: @dream.mode.id) %>
