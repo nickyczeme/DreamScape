@@ -3,13 +3,14 @@ class DreamsController < ApplicationController
   def index
     # mode_id = params[:id]
     # params[:mode]
+    @mode = params[:mode]
     if params[:mode].present?
       @dreams = Dream.all.where(mode: params[:mode])
     else
       @dreams = Dream.all
     end
   end
-  
+
   def show
   end
 
@@ -23,9 +24,8 @@ class DreamsController < ApplicationController
     @dream = Dream.new(dream_params)
     @dream.mode = @mode
     @dream.user = current_user
-    raise
     if @dream.save
-      redirect_to dream_path(@dream.id) #What is the path?????
+      redirect_to dream_path(@dream)
     else
       render :new
     end

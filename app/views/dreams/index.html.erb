@@ -1,5 +1,6 @@
 <div class='container'>
   <h1>Dreams</h1>
+  <%= link_to "New Dream (doesnt work)", new_mode_dream_path(@mode) %>
 
   <div class="cards">
     <% @dreams.each do |dream| %>
