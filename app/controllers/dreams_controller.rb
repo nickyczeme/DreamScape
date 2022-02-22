@@ -8,4 +8,10 @@ class DreamsController < ApplicationController
       @dreams = Dream.all
     end
   end
+
+  private
+
+  def dream_params
+    params.require(:dream).permit(:title, :description, :photo, :overall_rating, :intensity, :price)
+  end
 end
