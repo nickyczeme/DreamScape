@@ -11,9 +11,17 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <%# if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Modes", "#", class: "nav-link" %>
-          </li>
+          <%# We need to change the dreams. Now it goes to ALL of the dreams, not our specific mode. %>
+          <% if controller_name == "dreams" && action_name == "show" %>
+            <li class="nav-item active">
+              <%= link_to "Dreams", dreams_path, class: "nav-link" %>
+            </li>
+          <% end %>
+          <% unless current_page?(root_path) %>
+            <li class="nav-item active">
+              <%= link_to "Modes", root_path, class: "nav-link" %>
+            </li>
+          <% end %>
           <li class="nav-item">
             <%= link_to "My Dreams", "#", class: "nav-link" %>
           </li>
