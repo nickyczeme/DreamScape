@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require "open-uri"
 
 # Creating modes
 Mode.destroy_all
@@ -21,6 +22,9 @@ barbie = User.create(email: "bzoani@itba.edu.ar", first_name: "Barbie", last_nam
 # ....
 #nightmares
 falling = Dream.create(title: "Falling", description: "There's a rush of air on your face as you plunge over the edge into nothingness. You flail about, frantic for something to grab before you hit bottom, but there’s nothing — and no one — to save you. Terror consumes you as the bottom comes into view, and then, slam! You wake up in bed. Your heart is beating too fast, but you’re safe. It was just a dream.", intensity: 2, price: 7.5, user: barbie, mode: nightmares)
+file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+falling.photo.attach(io: file, filename: "#{falling.title}.png", content_type: 'image/png')
+
 being_chased = Dream.create(title: "Being Chased", description: "I was being chased by somebody or something and running from building to building and then I kind of melted into the second dream where I had my dog Pinto in his stroller and we were meeting my family for a Christmas show. We took an elevator to the top floor of what looks like the space needle in Seattle and we sat down at the end of this crescent shaped couch. I kind of had a bad view of the play or festivities, but then an unattractive guy sat down next to me. He was black and tall and wearing a gray sweater and jeans and boots.", intensity: 5, price: 8, user: barbie, mode: nightmares)
 death = Dream.create(title: "Death", description: "I was being tied up along with someone else. The rope was a small snake about a foot long. I felt that it would be attached around our waists. I said, “If this small snake is attached to our waists, then we will die. [The other person] said, “That would bring about not suffering. I will become a spiritual friend with you life after life, world upon world. If we make our vows in earnest, we should be able to receive benefits.” Then I saw it crawling down a piece of silk, and I awoke.", intensity: 1, price: 1.5, user: barbie, mode: nightmares)
 feeling_lost = Dream.create(title: "Feeling Lost", description: "Again, there was a huge boulder. I was climbing it with the child of the previous [dream]. Though I thought of how easy it would be to slip, it was really not all that dangerous. I took a small rock and let it go, thinking that it would tumble down, but I saw that it was not steep and the rock came to a rest at one side without falling down. Then there was a rock [shaped] like a log at the seashore. Its skin was smooth and gave an excellent footing. I walked and played all over the top.", intensity: 3, price: 7, user: barbie, mode: nightmares)
