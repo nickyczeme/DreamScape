@@ -1,21 +1,24 @@
-<div class="container">
+<div class='container'>
   <h1>Dreams</h1>
+
   <div class="cards">
     <% @dreams.each do |dream| %>
-    <%= link_to dream_path(dream) do %>
-      <div class='card-trip'>
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-        <%# <%= cl_image_tag dream.photo.key, height: 300, width: 400, crop: :fill %>
-        <div class="card-trip-infos">
-          <h2><%= dream.title %></h2>
-          <div>
-            <p><% dream.intensity.to_i.times do%><i class="fa-solid fa-circle"></i><% end %></p>
-            <h2 class="card-trip-pricing">£<%= dream.price %></h2>
+      <%= link_to dream_path(dream) do %>
+        <div class='card-trip'>
+          <%= cloudinary_picture(dream) %>
+          <div class="card-trip-infos">
+            <h2><%= dream.title %></h2>
+            <div>
+              <p><% dream.intensity.to_i.times do%><i class="fa-solid fa-circle"></i><% end %></p>
+              <h2 class="card-trip-pricing">£<%= dream.price %></h2>
+            </div>
+            <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>
           </div>
-          <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>
         </div>
-      </div>
+      <% end %>
+  <%# <%= link_to "Back to modes", root_path %>
     <% end %>
-  <% end %>
+
   </div>
+
 </div>
