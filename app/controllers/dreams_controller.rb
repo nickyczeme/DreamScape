@@ -1,6 +1,5 @@
 class DreamsController < ApplicationController
   before_action :set_dream, only: [:show]
-
   def index
     # mode_id = params[:id]
     # params[:mode]
@@ -10,16 +9,31 @@ class DreamsController < ApplicationController
       @dreams = Dream.all
     end
   end
-
+  
   def show
   end
 
-  private
-
-  def dream_params
-    params.require(:dream).permit(:title, :description, :photo, :overall_rating, :intensity, :price)
+  def new
+    @mode = Mode.find(params[:mode_id])
+    @dream = Dream.new
   end
 
+  def create
+    @mode = Mode.find(params[:mode_id])
+    @dream = Dream.new(dream_params)
+    @dream.mode = @mode
+    @dream.user = current_user
+    raise
+    if @dream.save
+      redirect_to dream_path(@dream.id) #What is the path?????
+    else
+      render :new
+    end
+  end
+  private
+  def dream_params
+    params.require(:dream).permit(:title, :description, :photo, :overall_rating, :intensity, :price, :mode_id)
+  end
   def set_dream
     @dream = Dream.find(params[:id])
   end
