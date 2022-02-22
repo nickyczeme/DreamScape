@@ -15,12 +15,10 @@ class DreamsController < ApplicationController
   end
 
   def new
-    @mode = Mode.find(params[:mode_id])
     @dream = Dream.new
   end
 
   def create
-    @mode = Mode.find(params[:mode_id])
     @dream = Dream.new(dream_params)
     @dream.mode = @mode
     @dream.user = current_user
