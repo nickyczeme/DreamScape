@@ -10,6 +10,7 @@ User.create(email: "bzoani@itba.edu.ar", first_name: "Barbie", last_name: "Zoani
 Dream.create(title: "Scary", description: "jdsklfdsjfdsjkfdsfds", intensity: 1, price: 1.5, user: User.first, mode: Mode.first)
 Booking.create(starting_date: Date.today, ending_date: Date.today + 5, user: User.first, dream: Dream.first)
 
+
 # Dream.first
 # Dream.first.bookings
 # Dream.first.users
