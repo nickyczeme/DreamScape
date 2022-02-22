@@ -6,12 +6,13 @@ class BookingsController < ApplicationController
 
   def create
     @dream = Dream.find(params[:dream_id])
-    @booking = Booking.new(params[:booking])
+    @booking = Booking.new(booking_params)
+    @booking.dream = @dream
     @booking.user = current_user
     if @booking.save
       redirect_to dream_path(@dream)
     else
-      render new
+      render :new
     end
   end
 
