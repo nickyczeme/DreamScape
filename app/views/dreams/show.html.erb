@@ -1,7 +1,9 @@
 
 <div class='container'>
   <h1>Book <%=@dream.title%></h1>
-  <%= cloudinary_picture(@dream) %>
+  <div style="object-fit:cover">
+    <%= cloudinary_picture(@dream) %>
+  </div>
 
   <div class='dream-info'>
     <div class='dream-info-mode'>
