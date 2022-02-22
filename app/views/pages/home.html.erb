@@ -1,7 +1,7 @@
 <h1>Dreams</h1>
 <p>Choose a mode</p>
-<ul>
+<div class = 'cards-mode'>
   <% @modes.each do |mode|%>
-  <li><%= link_to mode.name, dreams_path(mode: mode.name) %></li>
+  <div class="card-list"><%= link_to mode.name, dreams_path(mode: mode.id) %></div>
   <%end%>
-</ul>
+</div>
