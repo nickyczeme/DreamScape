@@ -11,4 +11,5 @@ class Dream < ApplicationRecord
   validates :intensity, inclusion: { in: [0, 1, 2, 3, 4, 5] }, allow_nil: false
   validates :price, numericality: { only_float: true }
   validates :price, numericality: { only_float: true }, inclusion: { in: 0..10 }
+  has_one_attached :photo
 end

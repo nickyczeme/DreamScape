@@ -2,6 +2,6 @@
 <p>Choose a mode</p>
 <div class = 'cards-mode'>
   <% @modes.each do |mode|%>
-  <div class="card-list"><%= link_to mode.name, dreams_path(mode: mode.name) %></div>
+  <div class="card-list"><%= link_to mode.name, dreams_path(mode: mode.id) %></div>
   <%end%>
 </div>
