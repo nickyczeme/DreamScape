@@ -1,9 +1,22 @@
 <h1>Dreams</h1>
-<ul>
-  <% @dreams.each do |dream| %>
-    <li>
-      <%= link_to dream.title, dream_path(dream) %>
-    </li>
-    <% end %>
-</ul>
 
+<div class="cards">
+  <% @dreams.each do |dream| %>
+    <%= link_to dream_path(dream) do %>
+      <div class='card-trip'>
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <%# <%= cl_image_tag dream.photo.key, height: 300, width: 400, crop: :fill %>
+        <div class="card-trip-infos">
+          <h2><%= dream.title %></h2>
+          <div>
+            <p><% dream.intensity.to_i.times do%><i class="fa-solid fa-circle"></i><% end %></p>
+            <h2 class="card-trip-pricing">£<%= dream.price %></h2>
+          </div>
+          <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>
+        </div>
+      </div>
+    <% end %>
+
+  <% end %>
+
+</div>
