@@ -29,7 +29,11 @@
             <%= image_tag "https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236__340.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "My Profile", "#", class: "dropdown-item" %>
-              <%= link_to "Logout", "#", class: "dropdown-item" %>
+              <% if user_signed_in?%>
+                <%= link_to "Log out", destroy_user_session_path ,method: :delete, class: "dropdown-item" %>
+              <%else%>
+                <%=link_to "Log in", new_user_session_path, class: "dropdown-item"%>
+              <%end%>
               <%#= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
