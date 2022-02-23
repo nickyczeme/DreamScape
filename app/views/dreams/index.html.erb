@@ -4,10 +4,10 @@
     <%if Mode.find(@mode.to_i).name == "Nightmares"%>
       <%= render 'pages/components/nightmares' %>
     <%end%>
-    <%if @mode.to_i == 18%>
+    <%if Mode.find(@mode.to_i).name == "Wellness"  %>
       <%= render 'pages/components/wellness' %>
     <%end%>
-    <%if @mode.to_i == 17%>
+    <% if Mode.find(@mode.to_i).name == "Romantic" %>
       <%= render 'pages/components/romantic' %>
     <%end%>
     <%if Mode.find(@mode.to_i).name == "Fantasy"%>

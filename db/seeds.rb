@@ -14,7 +14,7 @@ User.destroy_all
 Booking.destroy_all
 fantasy = Mode.create(name: "Fantasy")
 nightmares = Mode.create(name: "Nightmares")
-wellness = Mode.create(name: "Happy")
+wellness = Mode.create(name: "Wellness")
 romantic = Mode.create(name: "Romantic")
 
 barbie = User.create(email: "bzoani@itba.edu.ar", first_name: "Barbie", last_name: "Zoani", password: "123456")
