@@ -25,3 +25,24 @@
 }
 
 
+.left-home-page {
+  background-image: asset-url('background.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.right-home-page {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-homepage {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.category {
+  width: 100%;
+  height: 100%;
+}

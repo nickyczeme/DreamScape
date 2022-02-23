@@ -1,7 +1,38 @@
 
-<%= render "pages/components/banner"%>
-<div class = 'cards-home'>
-  <% @modes.each do |mode|%>
-  <div class="card-list"><%= link_to mode.name, dreams_path(mode: mode.id) %></div>
-  <%end%>
+<%# <%= render "pages/components/banner"%>
+<div class="container-homepage">
+  <div class="row">
+
+    <div class="col-12 col-lg-8 left-home-page">
+      <div class='title'>
+        <h1>Dream Scape</h1>
+      </div>
+      <div class='slogan'>
+        <h3>Select your category</h3>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-4 right-home-page">
+      <%= link_to dreams_path(mode: @modes[1].id) do %>
+        <%= image_tag 'nightmares-white.gif', class: 'category' %>
+      <% end %>
+      <%= link_to dreams_path(mode: @modes[0].id) do %>
+        <%= image_tag 'fantasy-white.gif', class: 'category' %>
+      <% end %>
+      <%= link_to dreams_path(mode: @modes[2].id) do %>
+        <%= image_tag 'wellness-white.gif', class: 'category' %>
+      <% end %>
+      <%= link_to dreams_path(mode: @modes[3].id) do %>
+        <%= image_tag 'romantic-white.gif', class: 'category' %>
+      <% end %>
+    </div>
+
+  </div>
 </div>
+
+
+<%# <div class = 'cards-home'>
+  <% @modes.each do |mode|%>
+  <%# <div class="card-list"><%= link_to mode.name, dreams_path(mode: mode.id) %></div>
+  <%# <%end%>
+<%# </div> %>
