@@ -1,14 +1,15 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-dream">
-  <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "logo1"%>
+  <div class="container-fluid" style="height:100%">
+    <%= link_to "#", class: "navbar-brand", style:"height:100%" do %>
+      <%= render 'pages/components/logo' %>
+
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="height:100%">
       <ul class="navbar-nav me-auto">
         <%# if user_signed_in? %>
           <%# We need to change the dreams. Now it goes to ALL of the dreams, not our specific mode. %>
@@ -31,8 +32,8 @@
             </li>
           <%end%>
           <li class="nav-item dropdown">
-            <i class="fa-solid fa-user avatar dropdown-toggle" id= "navbarDropdown" data-bs-toggle= "dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;margin-top:10px;"></i>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="background-color:grey;">
+            <i class="fa-solid fa-user avatar dropdown-toggle" id= "navbarDropdown" data-bs-toggle= "dropdown" aria-haspopup="true" aria-expanded="false" style="color:rgb(120, 117, 154);margin-top:10px;"></i>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="background-color:transparent;">
               <%= link_to "My Profile", "#", class: "dropdown-item" %>
               <% if user_signed_in?%>
                 <%= link_to "Log out", destroy_user_session_path ,method: :delete, class: "dropdown-item" %>
