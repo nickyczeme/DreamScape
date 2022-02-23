@@ -12,7 +12,7 @@
 }
 
 .card-trip:hover {
-  .image-class {
+  img {
     filter: blur(5px);
     transition: 1000ms;
   }
@@ -36,7 +36,7 @@ svg{
 .card-trip img {
   height: 200px;
   width: 100%;
-  // object-fit: cover;
+  object-fit: cover;
 }
 
 .title-default, .title-hover {
