@@ -31,7 +31,7 @@
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  padding: 5% 10% 15% 8%;
+  padding: 4% 10% 15% 8%;
   align-items: end;
 }
 
@@ -44,14 +44,21 @@
   margin-top: 0px;
 }
 
+#home-title1 {
+  margin-bottom: -10px;
+}
+
 #home-title2 {
   margin-top: -15px;
 }
+
 #home-category {
   color: black;
-  font-family: 'Gideon Roman', cursive;
-  font-size: 20px;
-  margin: 20px 10px 10px 10px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 25px;
+  padding: 30px 10px 10px 10px;
 }
 
 .right-home-page {
