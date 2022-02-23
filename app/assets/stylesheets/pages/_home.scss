@@ -1,10 +1,11 @@
 // Specific CSS for your home-page
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @media(max-width: 992px) {
   .cards {
     grid-template-columns: 1fr 1fr;
   }
 }
-
+// comment
 @media(max-width: 768px) {
   .cards {
     grid-template-columns: 1fr;
@@ -24,11 +25,33 @@
   }
 }
 
-
 .left-home-page {
   background-image: asset-url('background.gif');
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  padding: 5% 10% 15% 8%;
+  align-items: end;
+}
+
+#home-title1, #home-title2 {
+  color: black;
+  font-family: 'Playfair Display', serif;
+  font-size: 15vw;
+  font-weight: 800;
+  font-style: italic;
+  margin-top: 0px;
+}
+
+#home-title2 {
+  margin-top: -15px;
+}
+#home-category {
+  color: black;
+  font-family: 'Gideon Roman', cursive;
+  font-size: 20px;
+  margin: 20px 10px 10px 10px;
 }
 
 .right-home-page {
