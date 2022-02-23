@@ -1,4 +1,22 @@
 <div class='container'>
+
+<div class="title">
+    <%if Mode.find(@mode.to_i).name == "Nightmares"%>
+      <%= render 'pages/components/nightmares' %>
+    <%end%>
+    <%if @mode.to_i == 18%>
+      <%= render 'pages/components/wellness' %>
+    <%end%>
+    <%if @mode.to_i == 17%>
+      <%= render 'pages/components/romantic' %>
+    <%end%>
+    <%if Mode.find(@mode.to_i).name == "Fantasy"%>
+      <%= render 'pages/components/fantasy' %>
+    <%end%>
+  </div>
+
+
+
   <div class="cards">
     <% @dreams.each do |dream| %>
       <%= link_to dream_path(dream) do %>
