@@ -16,13 +16,22 @@
   transition: 0.5s background-color ease;
 }
 
-.navbar-lewagon-white {
-  background-color: white;
-}
-
 .navbar{
   position: fixed;
   top: 0;
   z-index: 1;
   width: 100%;
+}
+
+.navbar a{
+  color: white !important;
+  font-family: 'varela round', sans-serif;
+}
+
+li.nav-item{
+  padding: 10px;
+}
+
+.navbar-dream .navbar-brand img{
+  width: 60px !important;
 }
