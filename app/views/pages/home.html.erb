@@ -22,17 +22,10 @@
       <%# <%= link_to dreams_path(mode: @modes[3].id) do %>
         <%# <%= image_tag 'romantic-white.gif', class: 'category' %>
       <%# <% end %>
-      <%= link_to dreams_path(mode: @modes[1].id) do %>
-        <%= render 'pages/components/nightmares' %>
-      <% end %>
-      <%= link_to dreams_path(mode: @modes[0].id) do %>
-        <%= render 'pages/components/fantasy' %>
-      <% end %>
-      <%= link_to dreams_path(mode: @modes[2].id) do %>
-        <%= render 'pages/components/romantic' %>
-      <% end %>
-      <%= link_to dreams_path(mode: @modes[3].id) do %>
-        <%= render 'pages/components/wellness' %>
+      <% @modes.each do |mode| %>
+        <%= link_to dreams_path(mode: mode.id) do %>
+          <%= render "pages/components/#{mode.name.downcase}" %>
+        <% end %>
       <% end %>
     </div>
 
