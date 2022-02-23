@@ -3,10 +3,12 @@ class DreamsController < ApplicationController
   def index
     # mode_id = params[:id]
     # params[:mode]
-    @mode = params[:mode]
     if params[:mode].present?
+      @mode = params[:mode]
       @dreams = Dream.all.where(mode: params[:mode])
+      session[:mode] = @mode
     else
+      @mode = session[:mode]
       @dreams = Dream.all
     end
   end
