@@ -21,15 +21,15 @@
         <div class='card-trip'>
 
           <div class='show-default'>
-            <%= cloudinary_picture(dream) %>
-
             <h2 class='title-default'><%= dream.title %></h2>
+            <%= cloudinary_picture(dream) %>
           </div>
 
           <div class='show-hover'>
+            <h2 class='title-default'><%= dream.title %></h2>
             <%= cloudinary_picture(dream)%>
             <div class='content-hover'>
-              <div><h2><%= dream.title %></h2></div>
+              <div><h2 class='title-hover'><%= dream.title %></h2></div>
               <div class='content-info-hover'>
                 <div class='intensity'>
                   <h3>Intensity</h3>

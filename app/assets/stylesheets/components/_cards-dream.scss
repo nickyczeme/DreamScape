@@ -1,7 +1,7 @@
 .card-trip {
   height: 250px;
   overflow: hidden;
-  background: red;
+  background: transparent;
   // box-shadow: 0 0 15px rgba(0,0,0,0.2);
   .show-hover {
     display: none;
@@ -39,6 +39,10 @@ svg{
   // object-fit: cover;
 }
 
+.title-default, .title-hover {
+  text-align: center;
+}
+
 .card-trip h2 {
   font-size: 20px;
   font-weight: bold;
@@ -53,6 +57,22 @@ svg{
   opacity: .7;
   margin: 0;
 }
+
+.content-info-hover {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  margin-top: 10px;
+
+}
+
+.content-hover {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
 
 
 .card-trip .card-trip-infos {
