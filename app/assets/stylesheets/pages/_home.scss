@@ -33,6 +33,7 @@
   flex-direction: column;
   padding: 4% 10% 15% 8%;
   align-items: end;
+  height: 100vh;
 }
 
 #home-title1, #home-title2 {
@@ -67,12 +68,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  height: 100vh;
+  padding: 0px;
   // overflow: visible;
 }
 
 .container-homepage {
   height: 100vh;
-  overflow: scroll;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .cls-1 {
