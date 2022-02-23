@@ -20,7 +20,7 @@
   <div class="cards">
     <% @dreams.each do |dream| %>
       <%= link_to dream_path(dream) do %>
-        <div class='card-trip'> 
+        <div class='card-trip' data-controller="card" data-action="mouseenter->card#in mouseleave->card#out">
           <%= cloudinary_picture(dream) %>
           <div class="card-trip-infos">
             <h2><%= dream.title %></h2>
