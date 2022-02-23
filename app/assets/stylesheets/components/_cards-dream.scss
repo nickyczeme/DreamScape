@@ -1,27 +1,50 @@
+.card-hover {
+  .title-default {
+    color: black;
+  }
+  img {
+    filter: blur(8px);
+  }
+  .show-default {
+    display: none;
+  }
+  .show-hover {
+    display: initial;
+    position: relative;
+  }
+  .content-hover {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    top: 40px;
+    left: 40px;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* z-index: 1; */
+    /* text-align: center; */
+    position: absolute;
+  }
+}
+
+.card-default {
+  color:black;
+  .show-hover {
+    display: none;
+  }
+  .show-default {
+    display: initial;
+  }
+  .title-default {
+    // color: black; QUE QUEDA MEJOR???
+
+  }
+}
+
 .card-trip {
   height: 250px;
   overflow: hidden;
   background: transparent;
-  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  .show-hover {
-    display: none;
-  }
-  .show-default {
-    display: initial;
-  }
-}
-
-.card-trip:hover {
-  img {
-    filter: blur(5px);
-    transition: 1000ms;
-  }
-  .show-hover {
-    display: initial;
-  }
-  .show-default {
-    display: none;
-  }
 }
 
 .title{
@@ -62,16 +85,12 @@ svg{
   display: flex;
   flex-grow: 1;
   justify-content: space-between;
-  margin-top: 10px;
+  // margin-top: -80px;
+
 
 }
 
-.content-hover {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  justify-content: space-between;
-}
+
 
 
 
