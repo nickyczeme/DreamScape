@@ -68,10 +68,39 @@
 }
 
 .category {
-  width: 60%;
+  width: 90%;
+  // margin-top: 40px;
 }
 
+
+
 .cls-1 {
+  fill: rgb(212, 121, 100) !important;
+
+}
+
+.cls-2 {
   fill: rgb(196, 62, 91) !important;
 
 }
+
+.cls-3 {
+  fill: rgb(171, 88, 137) !important;
+
+}
+
+.cls-4 {
+  fill: rgb(140, 98, 148) !important;
+
+}
+
+
+
+.right-home-page > a {
+  text-align: center;
+}
+
+// .cls-1:hover {
+//   fill: rgb(196, 62, 91) !important;
+
+// }
