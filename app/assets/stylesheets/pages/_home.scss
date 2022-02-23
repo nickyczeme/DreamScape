@@ -76,20 +76,21 @@
 }
 
 .cls-1 {
-  fill: rgb(212, 121, 100) !important;
-}
-
-.cls-2 {
   fill: rgb(196, 62, 91) !important;
 }
 
+.cls-2 {
+  fill: rgb(212, 121, 100) !important;
+}
+
 .cls-3 {
-  fill: rgb(171, 88, 137) !important;
+  fill: rgb(140, 98, 148) !important;
 }
 
 .cls-4 {
-  fill: rgb(140, 98, 148) !important;
+  fill: rgb(171, 88, 137) !important;
 }
+
 
 .category {
   width: 90%;
@@ -97,7 +98,7 @@
   opacity: 1;
 }
 
-// 
+//
 // .cls-1:hover ~ .cls-2, .cls-3, .cls-4 {
 //     opacity: 0.5;
 //   }
