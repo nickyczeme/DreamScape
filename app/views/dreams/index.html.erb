@@ -1,25 +1,71 @@
-<div class='container'>
-  <h1>Dreams</h1>
-   <%# link_to "New Dream", new_dream_path %>
 
-  <div class="cards">
-    <% @dreams.each do |dream| %>
-      <%= link_to dream_path(dream) do %>
-        <div class='card-trip'>
-          <%= cloudinary_picture(dream) %>
-          <div class="card-trip-infos">
-            <h2><%= dream.title %></h2>
-            <div>
-              <p><% dream.intensity.to_i.times do%><i class="fa-solid fa-circle"></i><% end %></p>
-              <h2 class="card-trip-pricing">£<%= dream.price %></h2>
-            </div>
-            <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>
-          </div>
+
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto:400,700" rel="stylesheet">
+
+<div id="parent" class="container">
+
+  <!-- Navigation -->
+
+  <header>
+      <div class="textLogo">Dreams</div>
+  </header>
+
+  <!-- Card Layout -->
+
+  <div class="cardLayout">
+    <div class="firstRow">
+      <div class="card card-long">
+        <div class="card-long-bg">
         </div>
-      <% end %>
-  <%# <%= link_to "Back to modes", root_path %>
-    <% end %>
+        <div class="card-long-block">
+          <div class="card-long-header"><%=Dream.first.title%></div>
+        </div>
+      </div>
 
+      <div class="card l-spacing card-reg card-reg-overlay">
+         <div class="card-reg-header"><%=Dream.find(Dream.first.id+1).title%></div>
+      </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="secondRow">
+      <div class="card card-reg card-reg-bg">
+        <div class="card-reg-left-reg"><%=Dream.find(Dream.first.id+2).title%></div>
+      </div>
+      <div class="card card-long l-spacing">
+        <div class="card-long-bg-two">
+        </div>
+        <div class="card-long-block">
+          <div class="card-long-header"><p><%=Dream.find(Dream.first.id+3).title%></p></div>
+        </div>
+      </div>
+    </div>
   </div>
 
-</div>
+    <%# <div class="clear"></div>
+
+    <div class="thirdRow">
+      <div class="card r-spacing card-xl card-xl-bg">
+        <div class="card-reg-left-xl">A Great Way To Generate All The Motivation You Need To Get Fit</div>
+        <a class="likesCounter" href="#">
+            <span class="likes" id="likes5">734</span>
+          </a>
+      </div>
+      <div class="card card-sm card-sm-bg">
+        <div class="card-reg-left-sm">Great Benefits Of Natural Skin Care Products</div>
+        <a class="likesCounter" href="#">
+            <span class="likes" id="likes6">582</span>
+        </a>
+      </div>
+      </div>
+    </div>
+ </div>
+
+<div class="clear"></div>
+
+<div class="credits-wrap">
+    Design by <a class="credit" href="https://dribbble.com/shots/2572535-Curated-For-You-Day-91-dailyui" target="_blank">Sergiu Radu</a>
+</div> %>
