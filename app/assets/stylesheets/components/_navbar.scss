@@ -21,12 +21,14 @@
   top: 0;
   z-index: 1;
   width: 100%;
-  padding-top: 0px !important;
+  padding: 0px !important;
+  height:7vh
 }
 
 .navbar a{
-  color: white !important;
+  color: rgb(120, 117, 154) !important;
   font-family: 'varela round', sans-serif;
+  font-weight: bold;
 }
 
 li.nav-item{
@@ -35,4 +37,8 @@ li.nav-item{
 
 .navbar-dream .navbar-brand img{
   width: 75px !important;
+}
+
+.logo {
+  padding-left: 20px;
 }

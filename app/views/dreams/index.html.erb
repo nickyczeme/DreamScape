@@ -1,7 +1,4 @@
 <div class='container'>
-  <h1>Dreams</h1>
-   <%# link_to "New Dream", new_dream_path %>
-
   <div class="cards">
     <% @dreams.each do |dream| %>
       <%= link_to dream_path(dream) do %>
@@ -10,7 +7,7 @@
           <div class="card-trip-infos">
             <h2><%= dream.title %></h2>
             <div>
-              <p><% dream.intensity.to_i.times do%><i class="fa-solid fa-circle"></i><% end %></p>
+              <p><% dream.intensity.to_i.times do%><i class="fa-solid fa-circle" style="color:rgb(212, 121, 100)"></i> <% end %></p>
               <h2 class="card-trip-pricing">£<%= dream.price %></h2>
             </div>
             <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>

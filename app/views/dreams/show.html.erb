@@ -1,7 +1,7 @@
 
-<div class='container'>
+<div class='container col-6'>
   <h1>Book <%=@dream.title%></h1>
-  <div style="object-fit:cover">
+  <div style="object-fit:cover, text-align: center, background-color: white">
     <%= cloudinary_picture(@dream) %>
   </div>
 
@@ -12,7 +12,7 @@
     </div>
     <div class='dream-info-intensity'>
       <h3>Intensity</h3>
-      <p><% @dream.intensity.to_i.times do%><i class="fa-solid fa-circle"></i><% end %></p>
+      <p><% @dream.intensity.to_i.times do%><i class="fa-solid fa-circle" style="color:rgb(212, 121, 100)"></i> <% end %></p>
     </div>
     <div class='dream-info-price'>
       <h3>Price</h3>
