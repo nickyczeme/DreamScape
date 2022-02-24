@@ -1,8 +1,9 @@
 
 <div class='container'>
   <div class="row" style="height:100%">
-    <div class="col-5 p-3" style="background-color: white">
+    <div class="col-5 p-3 " style="border: 2px solid white">
       <h2>Book <%=@dream.title%></h2>
+      <br>
       <div class="image-show">
         <%= cloudinary_picture(@dream)%>
       </div>
@@ -14,17 +15,17 @@
         <div class='dream-info-item'>
           <h3>Intensity</h3>
           <p>
-            <% @dream.intensity.to_i.times do%><i class="fa-solid fa-circle" style="color:rgb(212, 121, 100)"></i> <% end %>
-            <% (5 - @dream.intensity.to_i).times do%><i class="fa-regular fa-circle" style="color:rgb(212, 121, 100)"></i> <% end %>
+            <% @dream.intensity.to_i.times do%><i class="fa-solid fa-circle" style='white'></i> <% end %>
+            <% (5 - @dream.intensity.to_i).times do%><i class="fa-regular fa-circle" style='white'></i> <% end %>
           </p>
         </div>
         <div class='dream-info-item'>
           <h3>Price</h3>
-          <p><i class="fa-solid fa-euro-sign" style='color: grey;font-size: 14px;'></i><%= @dream.price %></p>
+          <p><%= @dream.price %><i class="fa-solid fa-euro-sign" style='color: white;font-size: 14px;'></i></p>
 
         </div>
       </div>
-
+      <br>
       <div>
         <h3>Description</h3>
         <p style="text-align:justify"><%= @dream.description %></p>
