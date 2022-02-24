@@ -1,34 +1,41 @@
 
-<div class='container col-6'>
-  <h1>Book <%=@dream.title%></h1>
-  <div style="object-fit:cover, text-align: center, background-color: white">
-    <%= cloudinary_picture(@dream) %>
+<div class='container'>
+  <div class="row" style="height:100%">
+    <div class="col-5 p-3" style="background-color: white">
+      <h2>Book <%=@dream.title%></h2>
+      <div class="image-show">
+        <%= cloudinary_picture(@dream)%>
+      </div>
+
+
+      <div class='dream-info'>
+        <div class='dream-info-mode'>
+          <h3>Category</h3>
+          <p><%= @dream.mode.name %></p>
+        </div>
+        <div class='dream-info-intensity'>
+          <h3>Intensity</h3>
+          <p>
+            <% @dream.intensity.to_i.times do%><i class="fa-solid fa-circle" style="color:rgb(212, 121, 100)"></i> <% end %>
+            <% (5 - @dream.intensity.to_i).times do%><i class="fa-regular fa-circle" style="color:rgb(212, 121, 100)"></i> <% end %>
+          </p>
+        </div>
+        <div class='dream-info-price'>
+          <h3>Price</h3>
+          <p><%= @dream.price %></p>
+        </div>
+      </div>
+
+      <div>
+        <h3>Description</h3>
+        <p style="text-align:justify"><%= @dream.description %></p>
+      </div>
+    </div>
   </div>
 
-  <div class='dream-info'>
-    <div class='dream-info-mode'>
-      <h3>Mode</h3>
-      <p><%= @dream.mode.name %></p>
-    </div>
-    <div class='dream-info-intensity'>
-      <h3>Intensity</h3>
-      <p><% @dream.intensity.to_i.times do%><i class="fa-solid fa-circle" style="color:rgb(212, 121, 100)"></i> <% end %></p>
-    </div>
-    <div class='dream-info-price'>
-      <h3>Price</h3>
-      <p><%= @dream.price %></p>
-    </div>
-    <div class='dream-info-rating'>
-      <h3>Overall Rating</h3>
-      <p><%= @dream.overall_rating %></p>
-    </div>
-  </div>
-  <div>
-    <h3>Description</h3>
-    <p><%= @dream.description %></p>
-  </div>
-  <div>
-    <%= link_to "Book this dream", new_dream_booking_path(@dream), class: 'btn btn-outline-secondary'%>
-  </div>
 
+</div>
+
+<div>
+  <%= link_to "Book this dream", new_dream_booking_path(@dream), class: 'btn btn-outline-secondary'%>
 </div>

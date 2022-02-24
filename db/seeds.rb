@@ -12,7 +12,9 @@ Mode.destroy_all
 Dream.destroy_all
 User.destroy_all
 Booking.destroy_all
+
 fantasy = Mode.create(name: "Fantasy")
+
 nightmares = Mode.create(name: "Nightmares")
 wellness = Mode.create(name: "Wellness")
 romantic = Mode.create(name: "Romantic")
