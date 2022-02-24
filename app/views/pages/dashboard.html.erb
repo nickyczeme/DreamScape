@@ -1,0 +1,42 @@
+<div class='container' style="color:white">
+  <h1 style="color:white">Your dashboard</h1>
+  <div class='dash'>
+    <%if @user.booked_dreams.present? %>
+      <div class='booked'>
+        <h2 style="text-align: center">Dreams you have booked</h2>
+        <ul>
+          <%@user.bookings.each do |booking|%>
+            <li>
+              <%=link_to booking.dream.title, dream_path(booking.dream)%>
+              <p>Starting date: </p>
+              <%=booking.starting_date%>
+              <p>Ending date: </p>
+              <%=booking.ending_date%>
+            </li>
+          <% end %>
+          </ul>
+      </div>
+    <%else%>
+      <div class='booked' >
+        <h2 style="text-align: center">Dreams you have booked</h2>
+        <p style="text-align: center">You don't have any bookings</p>
+      </div>
+    <% end %>
+    <%if @user.dreams.present? %>
+      <div class='created'>
+        <h2 style="text-align:center">Dreams you created</h2>
+        <ul style="list-style-type:none; text-align:center">
+          <% @user.dreams.each do |dream| %>
+            <li>
+              <%=link_to dream.title, dream_path(dream)%></li>
+          <% end %>
+        </ul>
+      </div>
+      <%else%>
+      <div class='created' >
+        <h2 style="text-align: center">Dreams you created</h2>
+        <p style="text-align: center">You haven't created any dreams</p>
+      </div>
+    <% end %>
+  </div>
+</div>

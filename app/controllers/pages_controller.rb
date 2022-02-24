@@ -3,4 +3,8 @@ class PagesController < ApplicationController
   def home
     @modes = Mode.all
   end
+
+  def dashboard
+    @user = current_user
+  end
 end

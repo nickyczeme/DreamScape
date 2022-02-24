@@ -26,9 +26,6 @@
               <%= link_to "Modes", root_path, class: "nav-link" %>
             </li>
           <% end %>
-          <li class="nav-item">
-            <%= link_to "My Dreams", "#", class: "nav-link" %>
-          </li>
           <%if user_signed_in?%>
             <li class="nav-item">
               <%= link_to "New dream", new_dream_path, class: "nav-link" %>
@@ -37,9 +34,9 @@
           <li class="nav-item dropdown">
             <i class="fa-solid fa-user avatar dropdown-toggle" id= "navbarDropdown" data-bs-toggle= "dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;margin-top:10px;"></i>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="background-color:transparent;">
-              <%= link_to "My Profile", "#", class: "dropdown-item" %>
               <% if user_signed_in?%>
                 <%= link_to "Log out", destroy_user_session_path ,method: :delete, class: "dropdown-item" %>
+                <%= link_to "My Profile", dashboard_path, class: "dropdown-item" %>
               <%else%>
                 <%=link_to "Log in", new_user_session_path, class: "dropdown-item"%>
               <%end%>
