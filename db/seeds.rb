@@ -32,7 +32,7 @@ file = URI.open('https://images.unsplash.com/photo-1473830394358-91588751b241?ix
 falling.photo.attach(io: file, filename: "#{falling.title}.png", content_type: 'image/png')
 p falling
 
-being_chased = Dream.create(title: "Being Chased", description: "I was being chased by somebody or something and running from building to building and then I kind of melted into the second dream where I had my dog Pinto in his stroller and we were meeting my family for a Christmas show. We took an elevator to the top floor of what looks like the space needle in Seattle and we sat down at the end of this crescent shaped couch. I kind of had a bad view of the play or festivities, but then an unattractive guy sat down next to me. He was black and tall and wearing a gray sweater and jeans and boots.", intensity: 5, price: 8, user: barbie, mode: nightmares, adress: "Strohgasse 21A, Wien")
+being_chased = Dream.create(title: "Being Chased", description: "I was being chased by somebody or something and running from building to building and then I kind of melted into the second dream where I had my dog Pinto in his stroller and we were meeting my family for a Christmas show. We took an elevator to the top floor of what looks like the space needle in Seattle and we sat down at the end of this crescent shaped couch. I kind of had a bad view of the play or festivities, but then an unattractive guy sat down next to me. He was black and tall and wearing a gray sweater and jeans and boots.", intensity: 5, price: 8, user: barbie, mode: nightmares, address: "Strohgasse 21A, Wien")
 file_1 = URI.open('https://images.unsplash.com/photo-1519376108558-7b6471e87264?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTc3fHxkYXJrfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60')
 being_chased.photo.attach(io: file_1, filename: "#{being_chased.title}.png", content_type: 'image/png')
 
@@ -144,43 +144,44 @@ file_43 = URI.open('https://images.unsplash.com/photo-1519074069444-1ba4fff66d16
 burning_chrome.photo.attach(io: file_43, filename: "#{burning_chrome.title}.png", content_type: 'image/png')
 
 #wellness
-coming_back = Dream.create(title: "Coming Back", description: "my girlfriend had come back to me after breaking up with me. I was extremely happy and content until I woke up and it hadn't really happened.", intensity: 4, price: 9, user: barbie, mode: wellness)
+coming_back = Dream.create(title: "Coming Back", description: "my girlfriend had come back to me after breaking up with me. I was extremely happy and content until I woke up and it hadn't really happened.", intensity: 4, price: 9, user: barbie, mode: wellness, address: 'Madrid')
 file_20 = URI.open('https://images.unsplash.com/photo-1531391959417-97fdf08b3290?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzZ8fHNpbXBsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60')
 coming_back.photo.attach(io: file_20, filename: "#{coming_back.title}.png", content_type: 'image/png')
 
-being_young_again = Dream.create(title: "Being Young Again", description: "I dreamed I was sexy and slim again like I was in my 40's and flirted shamelessly with my boss which I never did in real life. He was interested which made me happy", intensity: 5, price: 5, user: barbie, mode: wellness)
+being_young_again = Dream.create(title: "Being Young Again", description: "I dreamed I was sexy and slim again like I was in my 40's and flirted shamelessly with my boss which I never did in real life. He was interested which made me happy", intensity: 5, price: 5, user: barbie, mode: wellness, address: 'Calle de Narciso Serra
+  28007 Madrid')
 file_21 = URI.open('https://images.unsplash.com/photo-1640605697310-f3ff957a83b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fGhhcHB5JTIwaW1hZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60')
 being_young_again.photo.attach(io: file_21, filename: "#{being_young_again.title}.png", content_type: 'image/png')
 
-puppy = Dream.create(title: "Puppy", description: "My family went to the mall to look at puppies. I was happy because we were going to get a puppy and everyone was the age we are now.", intensity: 5, price: 4.5, user: barbie, mode: wellness)
+puppy = Dream.create(title: "Puppy", description: "My family went to the mall to look at puppies. I was happy because we were going to get a puppy and everyone was the age we are now.", intensity: 5, price: 4.5, user: barbie, mode: wellness, address: '28013 Madrid')
 file_23 = URI.open('https://images.unsplash.com/photo-1562176546-95420556c872?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aGFwcHklMjBwdXBweXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60')
 puppy.photo.attach(io: file_23, filename: "#{puppy.title}.png", content_type: 'image/png')
 
-beach_day = Dream.create(title: "Beach Day", description: "I had a dream I was at the beach with my family. We were playing football in the sand and everyone was so happy. It was a good time. At the end we went out to eat.", intensity: 4, price: 7.5, user: barbie, mode: wellness)
+beach_day = Dream.create(title: "Beach Day", description: "I had a dream I was at the beach with my family. We were playing football in the sand and everyone was so happy. It was a good time. At the end we went out to eat.", intensity: 4, price: 7.5, user: barbie, mode: wellness, address: 'Plaza de España, 28008 Madrid')
 file_24 = URI.open('https://images.unsplash.com/photo-1551523577-433756fd559e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aGFwcHklMjBiZWFjaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60')
 beach_day.photo.attach(io: file_24, filename: "#{beach_day.title}.png", content_type: 'image/png')
 
-seeing_your_grandmother_once_more = Dream.create(title: "Seeing Your Grandmother Once More", description: "i was dreaming that I was visiting england and I was there with my grandmother (who has passed away) I was very happy being with her and we went to the theater and were having a wonderful time", intensity: 3, price: 5.5, user: barbie, mode: wellness)
+seeing_your_grandmother_once_more = Dream.create(title: "Seeing Your Grandmother Once More", description: "i was dreaming that I was visiting england and I was there with my grandmother (who has passed away) I was very happy being with her and we went to the theater and were having a wonderful time", intensity: 3, price: 5.5, user: barbie, mode: wellness, address: 'Pasadizo de San Ginés, 5, 28013 Madrid')
 file_25 = URI.open('https://images.unsplash.com/photo-1498673394965-85cb14905c89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGhhcHB5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60')
 seeing_your_grandmother_once_more.photo.attach(io: file_25, filename: "#{seeing_your_grandmother_once_more.title}.png", content_type: 'image/png')
 
-receiving_flowers_from_your_husband = Dream.create(title: "Receiving Flowers From Your Husband", description: "I dreamt that my husband surprised me with a plant. It had one exotic red flower that rose up on a long stem. I was very pleased that he had thought of me and my love of flowers.", intensity: 2, price: 3.5, user: barbie, mode: wellness)
+receiving_flowers_from_your_husband = Dream.create(title: "Receiving Flowers From Your Husband", description: "I dreamt that my husband surprised me with a plant. It had one exotic red flower that rose up on a long stem. I was very pleased that he had thought of me and my love of flowers.", intensity: 2, price: 3.5, user: barbie, mode: wellness, address: 'C. del Caballero de Gracia 28013 Madrid')
 file_26 = URI.open('https://images.unsplash.com/photo-1587546758950-bafc86850ae0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjc4fHxoYXBweXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60')
 receiving_flowers_from_your_husband.photo.attach(io: file_26, filename: "#{receiving_flowers_from_your_husband.title}.png", content_type: 'image/png')
 
-cottage_on_the_beach = Dream.create(title: "Cottage On The Beach", description: "I dreamt that I was living at the beach and I had left my husband and daughter and had a little cottage on the beach. In my dream I was walking down the beach and i was happy and content.", intensity: 5, price: 1.5, user: barbie, mode: wellness)
+cottage_on_the_beach = Dream.create(title: "Cottage On The Beach", description: "I dreamt that I was living at the beach and I had left my husband and daughter and had a little cottage on the beach. In my dream I was walking down the beach and i was happy and content.", intensity: 5, price: 1.5, user: barbie, mode: wellness, address: 'C. de Sta. Ana, 29, 28005 Madrid')
 file_27 = URI.open('https://images.unsplash.com/photo-1518560051567-9e648e0142f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTk1fHxoYXBweXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60')
 cottage_on_the_beach.photo.attach(io: file_27, filename: "#{cottage_on_the_beach.title}.png", content_type: 'image/png')
 
-spaceship = Dream.create(title: "Spaceship", description: "I am with some people on a space ship, bringing people on a long journey….But when we arrive, a friendly, trusting guy has no position or job….What to do, we wonder….We decide he can be an usher?....I explain to him what that is, he is happy about it….", intensity: 5, price: 3, user: barbie, mode: wellness)
+spaceship = Dream.create(title: "Spaceship", description: "I am with some people on a space ship, bringing people on a long journey….But when we arrive, a friendly, trusting guy has no position or job….What to do, we wonder….We decide he can be an usher?....I explain to him what that is, he is happy about it….", intensity: 5, price: 3, user: barbie, mode: wellness, address: 'C. de Embajadores, 41, 28012 Madrid')
 file_28 = URI.open('https://images.unsplash.com/photo-1560831214-d7f3921b9ec4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTJ8fGhhcHB5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60')
 spaceship.photo.attach(io: file_28, filename: "#{spaceship.title}.png", content_type: 'image/png')
 
-big_event = Dream.create(title: "Big Event", description: "A town is having a big public event….Two kinds of things are being prepared, like a brown wooden tray for one and a big black cylinder for the other….Everyone is getting ready, there is a happy vibe….at the end, a reward is given for a good job….some kind of treat for a kid, a small boy….He is happy….", intensity: 3, price: 9, user: barbie, mode: wellness)
+big_event = Dream.create(title: "Big Event", description: "A town is having a big public event….Two kinds of things are being prepared, like a brown wooden tray for one and a big black cylinder for the other….Everyone is getting ready, there is a happy vibe….at the end, a reward is given for a good job….some kind of treat for a kid, a small boy….He is happy….", intensity: 3, price: 9, user: barbie, mode: wellness, address: 'C. de Martín de Vargas, 7-I, n. 5, 28005 Madrid')
 file_29 = URI.open('https://images.unsplash.com/photo-1509909756405-be0199881695?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aGFwcHl8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60')
 big_event.photo.attach(io: file_29, filename: "#{big_event.title}.png", content_type: 'image/png')
 
-meeting_your_dog_again = Dream.create(title: "Meeting Your Dog Again", description: "I had a dream about my dog who had passed away 2 years ago. We were at the park and she was running and playing like we use too when she was still with me. I was happy during the dream.", intensity: 3, price: 8, user: barbie, mode: wellness)
+meeting_your_dog_again = Dream.create(title: "Meeting Your Dog Again", description: "I had a dream about my dog who had passed away 2 years ago. We were at the park and she was running and playing like we use too when she was still with me. I was happy during the dream.", intensity: 3, price: 8, user: barbie, mode: wellness, address: 'C. de Embajadores, 41, 28012 Madrid')
 file_30 = URI.open('https://images.unsplash.com/photo-1534361960057-19889db9621e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGhhcHB5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60')
 meeting_your_dog_again.photo.attach(io: file_30, filename: "#{meeting_your_dog_again.title}.png", content_type: 'image/png')
 
