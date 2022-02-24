@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 .navbar-dream {
   justify-content: space-between;
   background: transparent;
@@ -10,6 +12,8 @@
 .navbar-dream .navbar-brand img {
   width: 40px;
 }
+
+//comment
 
 .navbar-lewagon {
   background-color: transparent;
@@ -26,9 +30,10 @@
 }
 
 .navbar a{
-  color: rgb(120, 117, 154) !important;
-  font-family: 'varela round', sans-serif;
-  font-weight: bold;
+  color: white !important;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  // font-style: italic;
 }
 
 li.nav-item{
