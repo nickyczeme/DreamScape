@@ -1,7 +1,11 @@
-<div class="container col-4" data-controller="flatpickr">
-  <%= simple_form_for [@dream, @booking] do |f|%>
-    <%= f.input :starting_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-    <%= f.input :ending_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-    <%= f.button :submit, "Book", class: 'btn btn-outline-secondary' %>
-  <%end%>
+<div class='background'>
+  <div class="container" data-controller="flatpickr">
+    <div class = "new-form-div">
+      <%= simple_form_for [@dream, @booking], html: { class: "new-form"} do |f|%>
+        <%= f.input :starting_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.input :ending_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.button :submit, "Book", class: 'btn btn-outline-secondary' %>
+      <%end%>
+    </div>
+  </div>
 </div>
