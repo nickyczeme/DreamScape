@@ -13,6 +13,8 @@ Dream.destroy_all
 User.destroy_all
 Booking.destroy_all
 
+p "database clean"
+
 fantasy = Mode.create(name: "Fantasy")
 
 nightmares = Mode.create(name: "Nightmares")
@@ -21,11 +23,14 @@ romantic = Mode.create(name: "Romantic")
 
 barbie = User.create(email: "bzoani@itba.edu.ar", first_name: "Barbie", last_name: "Zoani", password: "123456")
 
+p "user and modes"
+
 # ....
 #nightmares
 falling = Dream.create(title: "Falling", description: "There's a rush of air on your face as you plunge over the edge into nothingness. You flail about, frantic for something to grab before you hit bottom, but there’s nothing — and no one — to save you. Terror consumes you as the bottom comes into view, and then, slam! You wake up in bed. Your heart is beating too fast, but you’re safe. It was just a dream.", intensity: 2, price: 7.5, user: barbie, mode: nightmares)
 file = URI.open('https://images.unsplash.com/photo-1473830394358-91588751b241?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjA4fHxkYXJrfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60')
 falling.photo.attach(io: file, filename: "#{falling.title}.png", content_type: 'image/png')
+p falling
 
 being_chased = Dream.create(title: "Being Chased", description: "I was being chased by somebody or something and running from building to building and then I kind of melted into the second dream where I had my dog Pinto in his stroller and we were meeting my family for a Christmas show. We took an elevator to the top floor of what looks like the space needle in Seattle and we sat down at the end of this crescent shaped couch. I kind of had a bad view of the play or festivities, but then an unattractive guy sat down next to me. He was black and tall and wearing a gray sweater and jeans and boots.", intensity: 5, price: 8, user: barbie, mode: nightmares)
 file_1 = URI.open('https://images.unsplash.com/photo-1519376108558-7b6471e87264?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTc3fHxkYXJrfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60')
@@ -63,54 +68,87 @@ drowning = Dream.create(title: "Drowning", description: "I was at a hotel with m
 file_9 = URI.open('https://images.unsplash.com/photo-1500099817043-86d46000d58f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA0fHxkYXJrfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60')
 drowning.photo.attach(io: file_9, filename: "#{drowning.title}.png", content_type: 'image/png')
 
-#fantasy
-merchant_of_bones = Dream.create(title: "Merchant Of Bones", description: " Two things come out of the mines: bodies and stone. They call him The Merchant of Bones, but he prefers to look upon himself as their saviour. In this, one of the darker fantasy short stories, if the mines fail, the city fails. If the city fails, the people will starve. He might be ruthless, his methods might be extreme, but he gets the job done. The people should thank him for it. Shouldn't they?", intensity: 4, price: 1.5, user: barbie, mode: fantasy)
+merchant_of_bones = Dream.create(title: "Merchant Of Bones", description: " Two things come out of the mines: bodies and stone. They call him The Merchant of Bones, but he prefers to look upon himself as their saviour. In this, one of the darker fantasy short stories, if the mines fail, the city fails. If the city fails, the people will starve. He might be ruthless, his methods might be extreme, but he gets the job done. The people should thank him for it. Shouldn't they?", intensity: 4, price: 1.5, user: barbie, mode: nightmares)
 file_10 = URI.open('https://images.unsplash.com/photo-1512514076443-1eef59c260b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjR8fGRhcmt8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60')
 merchant_of_bones .photo.attach(io: file_10, filename: "#{merchant_of_bones.title}.png", content_type: 'image/png')
 
-kiara = Dream.create(title: "Kiara", description: "Kiara is three things: a whore, a psychopath and a liar. Trapped between her own two perfect visions of hell, Kiara wants to free herself from the service of others, yet her only way out of the whorehouse puts her into servitude of a greater power; a life she despises even more. When opportunity presents itself to Kiara, things change. She finds her unique skills might just offer her the key to escape her cage. ", intensity: 3, price: 1.5, user: barbie, mode: fantasy)
+kiara = Dream.create(title: "Kiara", description: "Kiara is three things: a whore, a psychopath and a liar. Trapped between her own two perfect visions of hell, Kiara wants to free herself from the service of others, yet her only way out of the whorehouse puts her into servitude of a greater power; a life she despises even more. When opportunity presents itself to Kiara, things change. She finds her unique skills might just offer her the key to escape her cage. ", intensity: 3, price: 1.5, user: barbie, mode: nightmares)
 file_11 = URI.open('https://images.unsplash.com/photo-1495772667600-911ae4f608ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODl8fGRhcmt8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60')
 kiara.photo.attach(io: file_11, filename: "#{kiara.title}.png", content_type: 'image/png')
 
-save_her = Dream.create(title: "Save Her", description: "A young girl, a child: alone, scared and sold every night into a world not meant for someone so innocent and delicate. He has a chance to save her, but it will cost him everything he has. Will he pay the price.", intensity: 3, price: 6.5, user: barbie, mode: fantasy)
+save_her = Dream.create(title: "Save Her", description: "A young girl, a child: alone, scared and sold every night into a world not meant for someone so innocent and delicate. He has a chance to save her, but it will cost him everything he has. Will he pay the price.", intensity: 3, price: 6.5, user: barbie, mode: nightmares)
 file_12 = URI.open('https://images.unsplash.com/photo-1542887800-faca0261c9e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGRhcmt8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60')
 save_her.photo.attach(io: file_12, filename: "#{save_her.title}.png", content_type: 'image/png')
 
-hunted = Dream.create(title: "Hunted", description: "Alone in the woods, hounded by hunters, there seems little hope for Driev. Escape means braving the darkness, it means exposing himself to the vulnerable world beyond his place of safety. But, if he stays here too long, he might never get out alive. ", intensity: 5, price: 1.5, user: barbie, mode: fantasy)
+hunted = Dream.create(title: "Hunted", description: "Alone in the woods, hounded by hunters, there seems little hope for Driev. Escape means braving the darkness, it means exposing himself to the vulnerable world beyond his place of safety. But, if he stays here too long, he might never get out alive. ", intensity: 5, price: 1.5, user: barbie, mode: nightmares)
 file_13 = URI.open('https://images.unsplash.com/photo-1614594826236-d80b771be7ac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fG1vbnN0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60')
 hunted.photo.attach(io: file_13, filename: "#{hunted.title}.png", content_type: 'image/png')
 
-the_crucible = Dream.create(title: "The Crucible", description: "The Crucible of Steel is a game of wits. Of luck. Of Chance. Opponents face each other, one-on-one. A sword in the middle of the arena, a dagger at their side. The rules are simple, but the game is hard. Only a lone champion can emerge. Only one can survive.", intensity: 2, price: 4, user: barbie, mode: fantasy)
+the_crucible = Dream.create(title: "The Crucible", description: "The Crucible of Steel is a game of wits. Of luck. Of Chance. Opponents face each other, one-on-one. A sword in the middle of the arena, a dagger at their side. The rules are simple, but the game is hard. Only a lone champion can emerge. Only one can survive.", intensity: 2, price: 4, user: barbie, mode: nightmares)
 file_14 = URI.open('https://images.unsplash.com/photo-1414759030024-7889df4b20f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTJ8fGRhcmt8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60')
 the_crucible.photo.attach(io: file_14, filename: "#{the_crucible.title}.png", content_type: 'image/png')
 
-progress = Dream.create(title: "Progress", description: "He was born a fisherman and he will die a fisherman, but he is also deathly afraid of the ocean. Here, on the islands, where you can only ever be what you were born to be, how can you escape a world you can longer stand to live within? The answer, and resolution to this most unusual of fantasy short stories, is simple when you think about it: you take desperate and dangerous steps.", intensity: 4, price: 1.5, user: barbie, mode: fantasy)
+progress = Dream.create(title: "Progress", description: "He was born a fisherman and he will die a fisherman, but he is also deathly afraid of the ocean. Here, on the islands, where you can only ever be what you were born to be, how can you escape a world you can longer stand to live within? The answer, and resolution to this most unusual of fantasy short stories, is simple when you think about it: you take desperate and dangerous steps.", intensity: 4, price: 1.5, user: barbie, mode: nightmares)
 file_15 = URI.open('https://images.unsplash.com/photo-1624981631234-91fed8f45302?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjF8fG1vbnN0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60')
 progress.photo.attach(io: file_15, filename: "#{progress.title}.png", content_type: 'image/png')
 
-monster = Dream.create(title: "Monster", description: " In a nation torn apart by cultists and treachery, an overthrown Prince struggles with how best to serve his people. When temptation comes for him, when a chance to liberate his kin seems within reach, will he defeat the monsters that enslave him, or will he become one of them? ", intensity: 2, price: 3.5, user: barbie, mode: fantasy)
-file_16 = URI.open('https://images.unsplash.com/photo-1507718849053-b1de24eafb18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTR8fGRhcmt8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60
-  ')
+monster = Dream.create(title: "Monster", description: " In a nation torn apart by cultists and treachery, an overthrown Prince struggles with how best to serve his people. When temptation comes for him, when a chance to liberate his kin seems within reach, will he defeat the monsters that enslave him, or will he become one of them? ", intensity: 2, price: 3.5, user: barbie, mode: nightmares)
+file_16 = URI.open('https://images.unsplash.com/photo-1507718849053-b1de24eafb18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTR8fGRhcmt8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60')
 monster.photo.attach(io: file_16, filename: "#{monster.title}.png", content_type: 'image/png')
 
-ash_and_bone = Dream.create(title: "Ash and Bone", description: " Centuries pass, and as the wealth of the family slowly dries up, one is selected to enter the forest. The goal of this fantasy short story is simple: claim the reward within its heart. It’s a secret passed down from generation to generation. But one thing the chosen is not prepared for, one thing nobody knew to tell them, is that the forest is ready to fight back. ", intensity: 1, price: 1.5, user: barbie, mode: fantasy)
+ash_and_bone = Dream.create(title: "Ash and Bone", description: " Centuries pass, and as the wealth of the family slowly dries up, one is selected to enter the forest. The goal of this fantasy short story is simple: claim the reward within its heart. It’s a secret passed down from generation to generation. But one thing the chosen is not prepared for, one thing nobody knew to tell them, is that the forest is ready to fight back. ", intensity: 1, price: 1.5, user: barbie, mode: nightmares)
 file_17 = URI.open('https://images.unsplash.com/photo-1504903271097-d7e7c7f5f7ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80')
 ash_and_bone.photo.attach(io: file_17, filename: "#{ash_and_bone.title}.png", content_type: 'image/png')
 
-sacrifice = Dream.create(title: "Sacrifice", description: "Tradition is everything to the residents of Myah's village, but when tradition is torn away, how will they cope? Forced to let go of the old ways, the people fear the wrath of God. As tensions rise, tempers fray and desperation takes hold, in this most captivating of fantasy short stories, can Myah keep things from falling apart?", intensity: 5, price: 4.5, user: barbie, mode: fantasy)
+sacrifice = Dream.create(title: "Sacrifice", description: "Tradition is everything to the residents of Myah's village, but when tradition is torn away, how will they cope? Forced to let go of the old ways, the people fear the wrath of God. As tensions rise, tempers fray and desperation takes hold, in this most captivating of fantasy short stories, can Myah keep things from falling apart?", intensity: 5, price: 4.5, user: barbie, mode: nightmares)
 file_18 = URI.open('https://images.unsplash.com/photo-1479267658415-ff274a213280?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGRhcmt8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60')
 sacrifice.photo.attach(io: file_18, filename: "#{sacrifice.title}.png", content_type: 'image/png')
 
-the_wraith = Dream.create(title: "The Wraith", description: "It came while he was out in the city; the monster from the mountains. The wraith slaughtered his village, killed his father and stole his future. He has nothing left. Nothing but vengeance. Leading a small party of wrathful survivors into the beast’s frozen home, it soon becomes clear that the fight isn’t against the creature they hunt, it is for their very survival. One of the fantasy short stories with a deeper meaning, will it resonate with you like it has other readers?", intensity: 3, price: 15, user: barbie, mode: fantasy)
+the_wraith = Dream.create(title: "The Wraith", description: "It came while he was out in the city; the monster from the mountains. The wraith slaughtered his village, killed his father and stole his future. He has nothing left. Nothing but vengeance. Leading a small party of wrathful survivors into the beast’s frozen home, it soon becomes clear that the fight isn’t against the creature they hunt, it is for their very survival. One of the fantasy short stories with a deeper meaning, will it resonate with you like it has other readers?", intensity: 3, price: 9, user: barbie, mode: nightmares)
 file_19 = URI.open('https://images.unsplash.com/photo-1517405030045-45f7ad942106?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fGRhcmt8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60')
 the_wraith.photo.attach(io: file_19, filename: "#{the_wraith.title}.png", content_type: 'image/png')
 
+#fantasy
+
+
+the_fairytale = Dream.create(title: "The Fairytale", description: "I am lounging on wooden stairs in a fairytale-like location. There are two huge houses made of wood, one on either side of the long flight of stairs on which we sit. Near us is a patio with a huge tree. Nita is sitting next to me, and Jason tells me to look at the bird in the tree. I look into the branches and high up in the center I see a wonderful birdhouse like a beautiful old-fashioned birdcage. There are three birds, one large one that is very beautiful at the top of the birdhouse. The scene is so lovely I am near tears. I lay my head on one of the wooden steps and tell Nita I so want to live in this house.", intensity: 3, price: 7, user: barbie, mode: fantasy)
+file_36 = URI.open('https://images.unsplash.com/photo-1463109598173-3864231fade5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzh8fGZhaXJ5dGFsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60')
+the_fairytale.photo.attach(io: file_36, filename: "#{the_fairytale.title}.png", content_type: 'image/png')
+
+the_smallest_dragonboy = Dream.create(title: "The Smallest Dragonboy", description: "It came while he was out in the city; the monster from the mountains. The wraith slaughtered his village, killed his father and stole his future. He has nothing left. Nothing but vengeance. Leading a small party of wrathful survivors into the beast’s frozen home, it soon becomes clear that the fight isn’t against the creature they hunt, it is for their very survival. One of the fantasy short stories with a deeper meaning, will it resonate with you like it has other readers?", intensity: 3, price: 3, user: barbie, mode: fantasy)
+file_37 = URI.open('https://images.unsplash.com/photo-1633501637812-7e2058fddcc8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGRyYWdvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60')
+the_smallest_dragonboy.photo.attach(io: file_37, filename: "#{the_smallest_dragonboy.title}.png", content_type: 'image/png')
+
+the_city_born_great = Dream.create(title: "The City Born Great", description: "New York. In this inventive tale, New York City has grown old enough that it is time for it to be 'born' — but only if one reluctant midwife can keep its ancient enemies at bay.", intensity: 3, price: 7, user: barbie, mode: fantasy)
+file_38 = URI.open('https://media.istockphoto.com/photos/amazing-island-with-grove-floating-in-the-air-picture-id623897682?b=1&k=20&m=623897682&s=170667a&w=0&h=y50tslVLAMJFSgpgDisIK-Jm5RozEAiqlutLkpQYnGo=')
+the_city_born_great.photo.attach(io: file_38, filename: "#{the_city_born_great.title}.png", content_type: 'image/png')
+
+seasons_of_glass_and_iron = Dream.create(title: "Seasons of Glass and Iron", description: "Tabitha walks, and thinks of shoes. She has been thinking about shoes for a very long time: the length of three and a half pairs, to be precise, though it’s hard to reckon in iron. Easier to reckon how many pairs are left: of the seven she set out with, three remain, strapped securely against the outside of the pack she carries, weighing it down. The seasons won’t keep still, slip past her with the landscape, so she can’t say for certain whether a year of walking wears out a sole, but it seems about right. She always means to count the steps, starting with the next pair, but it’s easy to get distracted. She thinks about shoes because she cannot move forward otherwise: each iron strap cuts, rubs, bruises, blisters, and her pain fuels their ability to cross rivers, mountains, airy breaches between cliffs. She must move forward, or the shoes will never be worn down. The shoes must be worn down.", intensity: 3, price: 9, user: barbie, mode: fantasy)
+file_39 = URI.open('https://images.unsplash.com/photo-1464809142576-df63ca4ed7f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njd8fHRocm9uJTIwZmFudGFzeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60')
+seasons_of_glass_and_iron.photo.attach(io: file_39, filename: "#{seasons_of_glass_and_iron.title}.png", content_type: 'image/png')
+
+help_me_follow_my_sister_into_the_land_of_the_dead = Dream.create(title: "Help Me Follow My Sister into the Land of the Dead", description: "", intensity: 3, price: 15, user: barbie, mode: fantasy)
+file_40 = URI.open('https://images.unsplash.com/photo-1560942485-b2a11cc13456?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHRocm9uJTIwZmFudGFzeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60')
+the_wraith.photo.attach(io: file_40, filename: "#{help_me_follow_my_sister_into_the_land_of_the_dead.title}.png", content_type: 'image/png')
+
+the_time_machine = Dream.create(title: "The Time Machine", description: "He ends up in the world of AD 802,701, in a London that has been transformed into a vast garden, and where humankind has evolved into two distinct subspecies: the above-ground Eloi and the sinister subterranean Morlocks …", intensity: 4, price: 5, user: barbie, mode: fantasy)
+file_41 = URI.open('https://images.unsplash.com/photo-1508924379194-91ff8ad10091?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTExfHx0aW1lJTIwbWFzaGluZSUyMGZhbnRhc3l8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60')
+the_time_machine.photo.attach(io: file_41, filename: "#{the_time_machine.title}.png", content_type: 'image/png')
+
+the_nightfall = Dream.create(title: "The Nightfall", description: "The story is about a planet which doesn’t experience nightfall, except once in every 2,049 years, because it is normally lit by six suns. Since every human being alive will find nightfall a terrifying experience when that rare eclipse occurs, scientists worry about their chaos that will ensue when night falls …", intensity: 3, price: 7, user: barbie, mode: fantasy)
+file_42 = URI.open('https://media.istockphoto.com/photos/fantastic-night-forest-picture-id1267107237?b=1&k=20&m=1267107237&s=170667a&w=0&h=X7AgOe2DYsy2Ob47MuYDRI851cg1YlTkJar2duPv-o0=')
+the_nightfall.photo.attach(io: file_42, filename: "#{the_nightfall.title}.png", content_type: 'image/png')
+
+burning_chrome = Dream.create(title: "Burning Chrome", description: "the story of how they burned Chrome, a sophisticated security system with ties to organized crime.", intensity: 2, price: 7, user: barbie, mode: fantasy)
+file_43 = URI.open('https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGJ1cm5pbmclMjBmYW50YXN5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60')
+burning_chrome.photo.attach(io: file_43, filename: "#{burning_chrome.title}.png", content_type: 'image/png')
+
 #wellness
-coming_back = Dream.create(title: "Coming Back", description: "my girlfriend had come back to me after breaking up with me. I was extremely happy and content until I woke up and it hadn't really happened.", intensity: 2, price: 19.5, user: barbie, mode: wellness)
+coming_back = Dream.create(title: "Coming Back", description: "my girlfriend had come back to me after breaking up with me. I was extremely happy and content until I woke up and it hadn't really happened.", intensity: 4, price: 9, user: barbie, mode: wellness)
 file_20 = URI.open('https://images.unsplash.com/photo-1531391959417-97fdf08b3290?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzZ8fHNpbXBsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60')
 coming_back.photo.attach(io: file_20, filename: "#{coming_back.title}.png", content_type: 'image/png')
 
-being_young_again = Dream.create(title: "Being Young Again", description: "I dreamed I was sexy and slim again like I was in my 40's and flirted shamelessly with my boss which I never did in real life. He was interested which made me happy", intensity: 4, price: 1.5, user: barbie, mode: wellness)
+being_young_again = Dream.create(title: "Being Young Again", description: "I dreamed I was sexy and slim again like I was in my 40's and flirted shamelessly with my boss which I never did in real life. He was interested which made me happy", intensity: 5, price: 5, user: barbie, mode: wellness)
 file_21 = URI.open('https://images.unsplash.com/photo-1640605697310-f3ff957a83b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fGhhcHB5JTIwaW1hZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60')
 being_young_again.photo.attach(io: file_21, filename: "#{being_young_again.title}.png", content_type: 'image/png')
 
@@ -151,11 +189,12 @@ first_date = Dream.create(title: "First Date", description: "First date, he got 
 file_31 = URI.open('https://media.istockphoto.com/photos/summer-romance-picture-id1092543528?k=20&m=1092543528&s=612x612&w=0&h=nhX_u7Z6oJUzLL688-O_AaEY2S_nt-9W4NuXGPlL7B8=')
 first_date.photo.attach(io: file_31, filename: "#{first_date.title}.png", content_type: 'image/png')
 
-conviencing_him_to_stay_over = Dream.create(title: "Convincing Him To Stay Over", description: "I had a dream that I convinced my flirt to stay over. We were in marylebone somewhere nice. He took a bit of convincing. I love him I was happy. I can't really remember the conversation I woke up happy though.", intensity: 3, price: 11.5, user: barbie, mode: romantic)
+conviencing_him_to_stay_over = Dream.create(title: "Convincing Him To Stay Over", description: "I had a dream that I convinced my flirt to stay over. We were in marylebone somewhere nice. He took a bit of convincing. I love him I was happy. I can't really remember the conversation I woke up happy though.", intensity: 3, price: 4.5, user: barbie, mode: romantic)
 file_32 = URI.open('https://media.istockphoto.com/photos/summer-romance-picture-id1092543528?k=20&m=1092543528&s=612x612&w=0&h=nhX_u7Z6oJUzLL688-O_AaEY2S_nt-9W4NuXGPlL7B8=')
 conviencing_him_to_stay_over.photo.attach(io: file_32, filename: "#{conviencing_him_to_stay_over.title}.png", content_type: 'image/png')
+p conviencing_him_to_stay_over
 
-married = Dream.create(title: "Maried", description: "I dreamt about being married and a mom. I don't know who I was married to, and the kids weren't around, but I knew they existed because of all the toys and clothing lying around. I was really happy.", intensity: 5, price: 1.5, user: barbie, mode: romantic)
+married = Dream.create(title: "Married", description: "I dreamt about being married and a mom. I don't know who I was married to, and the kids weren't around, but I knew they existed because of all the toys and clothing lying around. I was really happy.", intensity: 5, price: 1.5, user: barbie, mode: romantic)
 file_33 = URI.open('https://media.istockphoto.com/photos/young-love-couple-celebrating-a-wedding-in-the-mountains-picture-id1095359758?k=20&m=1095359758&s=612x612&w=0&h=hO0reNOIxW-c0SIY8fNHFJnS4BZyDaqQCM1mJt37j40=')
 married.photo.attach(io: file_33, filename: "#{married.title}.png", content_type: 'image/png')
 
