@@ -9,20 +9,21 @@
 
 
       <div class='dream-info'>
-        <div class='dream-info-mode'>
+        <div class='dream-info-item'>
           <h3>Category</h3>
           <p><%= @dream.mode.name %></p>
         </div>
-        <div class='dream-info-intensity'>
+        <div class='dream-info-item'>
           <h3>Intensity</h3>
           <p>
             <% @dream.intensity.to_i.times do%><i class="fa-solid fa-circle" style="color:rgb(212, 121, 100)"></i> <% end %>
             <% (5 - @dream.intensity.to_i).times do%><i class="fa-regular fa-circle" style="color:rgb(212, 121, 100)"></i> <% end %>
           </p>
         </div>
-        <div class='dream-info-price'>
+        <div class='dream-info-item'>
           <h3>Price</h3>
-          <p><%= @dream.price %></p>
+          <p><i class="fa-solid fa-euro-sign" style='color: grey;font-size: 14px;'></i><%= @dream.price %></p>
+
         </div>
       </div>
 

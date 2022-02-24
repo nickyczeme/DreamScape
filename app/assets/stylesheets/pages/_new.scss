@@ -19,6 +19,7 @@
 
 .form-control, .form-select {
   background-color: black;
+  color: grey;
 }
 
 #new-form-title {
@@ -28,6 +29,7 @@
 h1 {
   color: black;
   text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; //CHANGE FONT
 }
 
 .background {
@@ -38,10 +40,9 @@ h1 {
   height: 100vh;
 }
 
-.btn {
-  color: grey;
-
-}
+// .btn {
+//   color: grey;
+// }
 
 // .btn:hover {
 //   color: grey;
