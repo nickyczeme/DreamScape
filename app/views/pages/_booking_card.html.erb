@@ -1,0 +1,28 @@
+<%= link_to dream_path(dream) do %>
+  <div class="card card-dash">
+    <div class="card__thumb">
+      <%= cloudinary_picture(dream) %>
+      <div class="card__caption">
+        <h2 class="card__tilte"><%= dream.title %></h2>
+        <div class='content-info-hover'>
+          <div class='intensity'>
+            <p style="font-size:16px; margin-bottom:0px">Intensity<p>
+            <p>
+              <% dream.intensity.to_i.times do%><i class="fa-solid fa-circle" style="color:white; font-size:10px"></i> <% end %>
+              <% (5 - dream.intensity.to_i).times do%><i class="fa-regular fa-circle" style="color:white; font-size:10px"></i> <% end %>
+            </p>
+          </div>
+          <div class='price'>
+            <p style="font-size:16px; margin-bottom:0px">Price</p>
+            <p style="font-size:10px"><%= dream.price %><i class="fa-solid fa-euro-sign" style='color: white;font-size: 10px;'></i></p>
+          </div>
+          <div class='user'>
+            <br>
+            <p style="font-size:16px">By <%= dream.user.first_name %></p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
