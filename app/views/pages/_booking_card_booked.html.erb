@@ -1,0 +1,18 @@
+<%= link_to dream_path(dream) do %>
+  <div class="card card-dash">
+    <div class="card__thumb">
+      <%= cloudinary_picture(dream) %>
+      <div class="card__caption">
+        <h2 class="card__tilte"><%= dream.title %></h2>
+        <div class='content-info-hover'>
+          <%# starting %>
+          <p>Starting date: </p>
+          <%=booking.starting_date%>
+          <p>Ending date: </p>
+          <%=booking.ending_date%>
+<%# ending %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
