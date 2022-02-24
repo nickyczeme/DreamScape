@@ -15,9 +15,10 @@ Booking.destroy_all
 
 p "database clean"
 
-fantasy = Mode.create(name: "Fantasy")
+
 
 nightmares = Mode.create(name: "Nightmares")
+fantasy = Mode.create(name: "Fantasy")
 wellness = Mode.create(name: "Wellness")
 romantic = Mode.create(name: "Romantic")
 
