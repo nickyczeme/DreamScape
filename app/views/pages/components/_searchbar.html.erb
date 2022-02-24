@@ -1,0 +1,9 @@
+<%= form_tag dreams_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a dream"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+
