@@ -38,6 +38,8 @@ h3 {
   background-color: black;
   padding: 0px;
   border: 1px solid black;
+  position: sticky;
+  top: 0;
 }
 .new-form-map{
   background-color: black;
@@ -51,14 +53,8 @@ h3 {
   padding: 0;
 }
 
-.banner-show{
-  background-size: cover;
-  background-position: center;
-  padding: 150px 0;
-  height: 40vh;
-  margin-bottom: 50px;
-  align-items: center;
-  display: flex;
-  text-align: center;
-
+.img-show > img{
+  width: 100%;
+  object-fit: cover;
+  height: 30vh;
 }

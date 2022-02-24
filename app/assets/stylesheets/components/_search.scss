@@ -7,7 +7,7 @@
   color: white;
 }
 
-.search-button {
+.search-button, .button-our {
   font-family: 'Playfair Display', serif;
   background-color: transparent;
   border: 1px solid white;
@@ -21,7 +21,7 @@
   height: 38px;
 }
 
-.search-button {
+.search-button, .button-our {
   font-family: 'Playfair Display', serif;
   background-color: transparent;
   border: 1px solid white;
@@ -35,7 +35,7 @@
   height: 38px;
 }
 
-.search-button:hover {
+.search-button:hover, .button-our:hover {
   font-family: 'Playfair Display', serif;
   background-color: white;
   border: 1px solid black;
