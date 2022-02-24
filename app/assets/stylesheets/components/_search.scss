@@ -1,0 +1,64 @@
+.search-bar {
+  font-family: 'Playfair Display', serif;
+  margin: 20px 20px 20px 0;
+  border: 1px solid white;
+}
+.form-control {
+  color: white;
+}
+
+.search-button {
+  font-family: 'Playfair Display', serif;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0px 46px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  height: 38px;
+}
+
+.search-button {
+  font-family: 'Playfair Display', serif;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0px 46px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  height: 38px;
+}
+
+.search-button:hover {
+  font-family: 'Playfair Display', serif;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  transition: 1000ms;
+}
+
+
+.search-box {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+}
+
+
+.search-bar::placeholder{
+  color:white
+}
+
+.search-bar:focus::placeholder{
+  color: black;
+  border-color: white;
+  outline: 0;
+  box-shadow: 0;
+}
