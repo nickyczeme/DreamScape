@@ -1,19 +1,20 @@
 <div class='container'>
 
-  <div class="title">
-      <%if Mode.find(@mode.to_i).name == "Nightmares"%>
-        <%= render 'pages/components/nightmares' %>
-      <%end%>
-      <%if Mode.find(@mode.to_i).name == "Wellness"  %>
-        <%= render 'pages/components/wellness' %>
-      <%end%>
-      <% if Mode.find(@mode.to_i).name == "Romantic" %>
-        <%= render 'pages/components/romantic' %>
-      <%end%>
-      <%if Mode.find(@mode.to_i).name == "Fantasy"%>
-        <%= render 'pages/components/fantasy' %>
-      <%end%>
-    </div>
+<div class="title">
+    <%if Mode.find(@mode.to_i).name == "Nightmares"%>
+      <%= render 'pages/components/nightmares' %>
+    <%end%>
+    <%if Mode.find(@mode.to_i).name == "Wellness"  %>
+      <%= render 'pages/components/wellness' %>
+    <%end%>
+    <% if Mode.find(@mode.to_i).name == "Romantic" %>
+      <%= render 'pages/components/romantic' %>
+    <%end%>
+    <%if Mode.find(@mode.to_i).name == "Fantasy"%>
+      <%= render 'pages/components/fantasy' %>
+    <%end%>
+  </div>
+  <%= render 'pages/components/searchbar' %>
 
     <div class="cards card-trip">
       <% @dreams.each do |dream| %>
@@ -41,6 +42,7 @@
                     <br>
                     <p>By <%= dream.user.first_name %></p>
                   </div>
+
                 </div>
               </div>
             </div>

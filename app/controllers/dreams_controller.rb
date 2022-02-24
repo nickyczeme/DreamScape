@@ -3,18 +3,29 @@ class DreamsController < ApplicationController
   def index
     # mode_id = params[:id]
     # params[:mode]
+    # if params[:query].present?
+    #   @dreams = Dream.all.where(mode: params[:mode]).global_search(params[:query])
+    # else
+    #   @dreams = Dream.all.where(mode: params[:mode])
+    # end
+
+
     if params[:mode].present?
-      @mode = params[:mode]
-      @dreams = Dream.all.where(mode: params[:mode])
-      session[:mode] = @mode
+      dream_search(params)
     else
       @mode = session[:mode]
-      @dreams = Dream.all
+      dream_search_all(params)
     end
   end
 
   def show
-
+    @markers = [
+      {
+        lat: @dream.latitude,
+        lng: @dream.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { dream: @dream })
+      }
+    ]
   end
 
   def new
@@ -30,11 +41,32 @@ class DreamsController < ApplicationController
       render :new
     end
   end
+
   private
+
   def dream_params
     params.require(:dream).permit(:title, :description, :photo, :overall_rating, :intensity, :price, :mode_id)
   end
+
   def set_dream
     @dream = Dream.find(params[:id])
+  end
+
+  def dream_search(params)
+    @mode = params[:mode]
+    session[:mode] = @mode
+    if params[:query].present?
+      @dreams = Dream.where(mode: params[:mode]).global_search(params[:query])
+    else
+      @dreams = Dream.where(mode: params[:mode])
+    end
+  end
+
+  def dream_search_all(params)
+    if params[:query].present?
+      @dreams = Dream.where(mode: @mode).global_search(params[:query])
+    else
+      @dreams = Dream.where(mode: @mode)
+    end
   end
 end

@@ -1,14 +1,17 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-dream">
   <div class="container-fluid" style="height:100%">
     <%= link_to root_path, class: "navbar-brand", style:"height:100%" do %>
+    <% if current_page?(root_path) || controller_name == "dreams" && action_name == "snewhow"%>
+      <%= render 'pages/components/logo2' %>
+    <% else %>
       <%= render 'pages/components/logo' %>
-
+    <% end %>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
+<%# jj %>
     <div class="collapse navbar-collapse" id="navbarSupportedContent" style="height:100%">
       <ul class="navbar-nav me-auto">
         <%# if user_signed_in? %>
@@ -23,20 +26,17 @@
               <%= link_to "Modes", root_path, class: "nav-link" %>
             </li>
           <% end %>
-          <li class="nav-item">
-            <%= link_to "My Dreams", "#", class: "nav-link" %>
-          </li>
           <%if user_signed_in?%>
             <li class="nav-item">
               <%= link_to "New dream", new_dream_path, class: "nav-link" %>
             </li>
           <%end%>
           <li class="nav-item dropdown">
-            <i class="fa-solid fa-user avatar dropdown-toggle" id= "navbarDropdown" data-bs-toggle= "dropdown" aria-haspopup="true" aria-expanded="false" style="color:rgb(120, 117, 154);margin-top:10px;"></i>
+            <i class="fa-solid fa-user avatar dropdown-toggle" id= "navbarDropdown" data-bs-toggle= "dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;margin-top:10px;"></i>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="background-color:transparent;">
-              <%= link_to "My Profile", "#", class: "dropdown-item" %>
               <% if user_signed_in?%>
                 <%= link_to "Log out", destroy_user_session_path ,method: :delete, class: "dropdown-item" %>
+                <%= link_to "My Profile", dashboard_path, class: "dropdown-item" %>
               <%else%>
                 <%=link_to "Log in", new_user_session_path, class: "dropdown-item"%>
               <%end%>

@@ -1,7 +1,7 @@
 
 <div class='background'>
   <div class="container">
-    <h1 id="new-form-title">Create a new dream</h1>
+    <h1 id="new-form-title">New dream</h1>
     <div class = "new-form-div">
       <%= simple_form_for @dream, html: { class: "new-form"} do |f| %>
         <%= f.input :title, label: 'Enter your title please', error: 'Title is mandatory, please specify one' %>

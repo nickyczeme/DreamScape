@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_22_092140) do
+ActiveRecord::Schema.define(version: 2022_02_24_112446) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,6 +64,9 @@ ActiveRecord::Schema.define(version: 2022_02_22_092140) do
     t.bigint "mode_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "latitude"
+    t.float "longitude"
+    t.string "address"
     t.index ["mode_id"], name: "index_dreams_on_mode_id"
     t.index ["user_id"], name: "index_dreams_on_user_id"
   end
