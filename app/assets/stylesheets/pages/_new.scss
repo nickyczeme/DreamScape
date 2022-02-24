@@ -4,6 +4,9 @@
   background-color: black;
 
 }
+
+// comment
+
 .new-form-div {
   // margin: 10px 40px 40px 40px;
   // max-width: 400px;
@@ -57,3 +60,26 @@ h1 {
 //   color: grey;
 
 // }
+
+
+.submit-form:hover {
+  font-family: 'Playfair Display', serif;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  // display: inline-block;
+
+  font-weight: bold;
+
+}
+
+.submit-form {
+  margin-top: 10px;
+  font-family: 'Playfair Display', serif;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  transition: 1000ms;
+  padding: 10px 27px;
+  text-align: center;
+}
