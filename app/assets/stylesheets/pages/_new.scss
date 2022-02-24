@@ -11,6 +11,8 @@
   margin: auto;
   background-color: black;
   padding: 30px;
+  border: 1px solid white;
+  margin-bottom: 20px;
 }
 
 .mb-3 {
@@ -27,19 +29,26 @@
 }
 
 h1 {
-  color: black;
+  color: white;
   text-align: center;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; //CHANGE FONT
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  margin-bottom: 10px;
 }
 
 .background {
   padding: 20px;
-  background-image: asset-url('background.gif');
+  // background-image: asset-url('background.gif');
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
 }
 
+
+.fake-footer {
+  background-image: asset-url('background.gif');
+  height: 10px;
+}
 // .btn {
 //   color: grey;
 // }

@@ -1,60 +1,54 @@
 <div class='container'>
 
-<div class="title">
-    <%if Mode.find(@mode.to_i).name == "Nightmares"%>
-      <%= render 'pages/components/nightmares' %>
-    <%end%>
-    <%if Mode.find(@mode.to_i).name == "Wellness"  %>
-      <%= render 'pages/components/wellness' %>
-    <%end%>
-    <% if Mode.find(@mode.to_i).name == "Romantic" %>
-      <%= render 'pages/components/romantic' %>
-    <%end%>
-    <%if Mode.find(@mode.to_i).name == "Fantasy"%>
-      <%= render 'pages/components/fantasy' %>
-    <%end%>
-  </div>
+  <div class="title">
+      <%if Mode.find(@mode.to_i).name == "Nightmares"%>
+        <%= render 'pages/components/nightmares' %>
+      <%end%>
+      <%if Mode.find(@mode.to_i).name == "Wellness"  %>
+        <%= render 'pages/components/wellness' %>
+      <%end%>
+      <% if Mode.find(@mode.to_i).name == "Romantic" %>
+        <%= render 'pages/components/romantic' %>
+      <%end%>
+      <%if Mode.find(@mode.to_i).name == "Fantasy"%>
+        <%= render 'pages/components/fantasy' %>
+      <%end%>
+    </div>
 
-  <div class="cards">
-    <% @dreams.each do |dream| %>
-      <%= link_to dream_path(dream) do %>
-
-        <div class='card-trip' data-controller="card" data-action="mouseover->card#in mouseout->card#out">
-
-          <div class='show-default'>
-            <h2 class='title-default'><%= dream.title %></h2>
-            <%= cloudinary_picture(dream) %>
-          </div>
-
-          <div class='show-hover'>
-            <h2 class='title-default'><%= dream.title %></h2>
-            <%= cloudinary_picture(dream)%>
-            <div class='content-hover'>
-              <div><h2 class='title-hover'><%= dream.title %></h2></div>
-              <div class='content-info-hover'>
-                <div class='intensity'>
-                  <h3>Intensity</h3>
-                  <p>
-                    <% dream.intensity.to_i.times do%><i class="fa-solid fa-circle" style="color:rgb(212, 121, 100)"></i> <% end %>
-                    <% (5 - dream.intensity.to_i).times do%><i class="fa-regular fa-circle" style="color:rgb(212, 121, 100)"></i> <% end %>
-                  </p>
-                </div>
-                <div class='price'>
-                  <h3>Price</h3>
-                  <p><i class="fa-solid fa-euro-sign" style='color: grey;font-size: 14px;'></i><%= dream.price %></p>
-                </div>
-                <div class='user'>
-                  <p>By <%= dream.user.first_name %></p>
+    <div class="cards card-trip">
+      <% @dreams.each do |dream| %>
+        <%= link_to dream_path(dream) do %>
+          <div class="card">
+            <div class="card__thumb">
+              <%= cloudinary_picture(dream) %>
+              <div class="card__caption">
+                <h2 class="card__tilte"><%= dream.title %></h2>
+                <p class="card__snippet"><%= dream.description %></p>
+                <br>
+                <div class='content-info-hover'>
+                  <div class='intensity'>
+                    <p>Intensity<p>
+                    <p>
+                      <% dream.intensity.to_i.times do%><i class="fa-solid fa-circle" style="color:white"></i> <% end %>
+                      <% (5 - dream.intensity.to_i).times do%><i class="fa-regular fa-circle" style="color:white"></i> <% end %>
+                    </p>
+                  </div>
+                  <div class='price'>
+                    <p>Price</p>
+                    <p><%= dream.price %><i class="fa-solid fa-euro-sign" style='color: white;font-size: 14px;'></i></p>
+                  </div>
+                  <div class='user'>
+                    <br>
+                    <p>By <%= dream.user.first_name %></p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        <% end %>
 
-        </div>
-
-      <% end %>
-    <% end %>
+      <% end  %>
+    </div>
 
   </div>
-
 </div>
