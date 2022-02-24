@@ -29,3 +29,36 @@ h3 {
   font-size: 15px;
   color: grey;
 }
+
+.mapboxgl-popup-content p{
+  color:black;
+}
+.new-form-div-map{
+  width: 100%;
+  background-color: black;
+  padding: 0px;
+  border: 1px solid black;
+}
+.new-form-map{
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.map{
+  height: 41vh;
+  padding: 0;
+}
+
+.banner-show{
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 40vh;
+  margin-bottom: 50px;
+  align-items: center;
+  display: flex;
+  text-align: center;
+
+}

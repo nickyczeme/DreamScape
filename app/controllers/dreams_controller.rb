@@ -19,6 +19,7 @@ class DreamsController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
     @markers = [
       {
         lat: @dream.latitude,
