@@ -6,12 +6,16 @@ export default class extends Controller {
   }
 
   in() {
+    // this.element.style.transition = "all 2s"
     this.element.classList.add("card-hover")
+    // this.element.style.transition = "all 2s"
     this.element.classList.remove("card-default")
   }
 
   out() {
+    // this.element.style.transition = "all 2s"
     this.element.classList.add("card-default")
+    // this.element.style.transition = "all 2s"
     this.element.classList.remove("card-hover")
   }
 }

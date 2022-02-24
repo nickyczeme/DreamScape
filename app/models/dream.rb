@@ -1,4 +1,11 @@
 class Dream < ApplicationRecord
+  include PgSearch::Model
+  pg_search_scope :global_search,
+    against: [ :title, :description ],
+    using: {
+      tsearch: { prefix: true }
+    }
+
   belongs_to :user
   # Dream.fist.user
   belongs_to :mode
@@ -12,4 +19,5 @@ class Dream < ApplicationRecord
   validates :price, numericality: { only_float: true }
   validates :price, numericality: { only_float: true }, inclusion: { in: 0..10 }
   has_one_attached :photo
+
 end
