@@ -1,9 +1,10 @@
-<%= form_tag dreams_path, method: :get do %>
+<%= form_tag dreams_path, class: "search-box", method: :get do %>
   <%= text_field_tag :query,
     params[:query],
-    class: "form-control",
+    class: "form-control search-bar",
     placeholder: "Find a dream"
   %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
+  <%= submit_tag "Search", class: "search-button" %>
 <% end %>
 
+<%# //comment %>

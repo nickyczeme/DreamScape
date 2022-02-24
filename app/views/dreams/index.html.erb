@@ -14,8 +14,8 @@
       <%= render 'pages/components/fantasy' %>
     <%end%>
   </div>
-
   <%= render 'pages/components/searchbar' %>
+
   <div class="cards">
     <% @dreams.each do |dream| %>
       <%= link_to dream_path(dream) do %>
