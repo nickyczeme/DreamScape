@@ -19,7 +19,13 @@ class DreamsController < ApplicationController
   end
 
   def show
-
+    @markers = [
+      {
+        lat: @dream.latitude,
+        lng: @dream.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { dream: @dream })
+      }
+    ]
   end
 
   def new
