@@ -1,6 +1,5 @@
-<div class='container'>
-
-<div class="title">
+<div class='container' id="index__container">
+  <div class="title">
     <%if Mode.find(@mode.to_i).name == "Nightmares"%>
       <%= render 'pages/components/nightmares' %>
     <%end%>
@@ -15,42 +14,43 @@
     <%end%>
   </div>
   <%= render 'pages/components/searchbar' %>
-
-    <div class="cards card-trip">
-      <% @dreams.each do |dream| %>
-        <%= link_to dream_path(dream) do %>
-          <div class="card">
-            <div class="card__thumb">
-              <%= cloudinary_picture(dream) %>
-              <div class="card__caption">
-                <h2 class="card__tilte"><%= dream.title %></h2>
-                <p class="card__snippet"><%= dream.description %></p>
-                <br>
-                <div class='content-info-hover'>
-                  <div class='intensity'>
-                    <p>Intensity<p>
-                    <p>
-                      <% dream.intensity.to_i.times do%><i class="fa-solid fa-circle" style="color:white"></i> <% end %>
-                      <% (5 - dream.intensity.to_i).times do%><i class="fa-regular fa-circle" style="color:white"></i> <% end %>
-                    </p>
-                  </div>
-                  <div class='price'>
-                    <p>Price</p>
-                    <p><%= dream.price %><i class="fa-solid fa-euro-sign" style='color: white;font-size: 14px;'></i></p>
-                  </div>
-                  <div class='user'>
+  <div class="cards card-trip">
+          <% @dreams.each do |dream| %>
+            <%= link_to dream_path(dream) do %>
+              <div class="card">
+                <div class="card__thumb">
+                  <%= cloudinary_picture(dream) %>
+                  <div class="card__caption">
+                    <h2 class="card__tilte"><%= dream.title %></h2>
+                    <p class="card__snippet"><%= dream.description %></p>
                     <br>
-                    <p>By <%= dream.user.first_name %></p>
-                  </div>
+                    <div class='content-info-hover'>
+                      <div class='intensity'>
+                        <p>Intensity<p>
+                        <p>
+                          <% dream.intensity.to_i.times do%><i class="fa-solid fa-circle" style="color:white"></i> <% end %>
+                          <% (5 - dream.intensity.to_i).times do%><i class="fa-regular fa-circle" style="color:white"></i> <% end %>
+                        </p>
+                      </div>
+                      <div class='price'>
+                        <p>Price</p>
+                        <p><%= dream.price %><i class="fa-solid fa-euro-sign" style='color: white;font-size: 14px;'></i></p>
+                      </div>
+                      <div class='user'>
+                        <br>
+                        <p>By <%= dream.user.first_name %></p>
+                      </div>
 
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-        <% end %>
+            <% end %>
 
-      <% end  %>
+          <% end  %>
+        </div>
+
+      </div>
     </div>
-
   </div>
 </div>
