@@ -22,6 +22,7 @@ fantasy = Mode.create(name: "Fantasy")
 wellness = Mode.create(name: "Wellness")
 romantic = Mode.create(name: "Romantic")
 
+user = User.create(email: "hello@gmail.com", first_name: "Le", last_name: 'Wagon', password:'123456')
 barbie = User.create(email: "bzoani@itba.edu.ar", first_name: "Barbie", last_name: "Zoani", password: "123456")
 fanny = User.create(email: "f.hohenlohe@hotmail.com", first_name: "Fanny", last_name: "Hohenlohe", password: "123456")
 nicky = User.create(email: "nczemerinski@itba.edu.ar", first_name: "Nicky", last_name: "Czemerinski", password: "123456")
@@ -138,11 +139,11 @@ the_time_machine = Dream.create(title: "The Time Machine", description: "He ends
 file_41 = URI.open('https://images.unsplash.com/photo-1508924379194-91ff8ad10091?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTExfHx0aW1lJTIwbWFzaGluZSUyMGZhbnRhc3l8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60')
 the_time_machine.photo.attach(io: file_41, filename: "#{the_time_machine.title}.png", content_type: 'image/png')
 
-the_nightfall = Dream.create(title: "The Nightfall", description: "The story is about a planet which doesn’t experience nightfall, except once in every 2,049 years, because it is normally lit by six suns. Since every human being alive will find nightfall a terrifying experience when that rare eclipse occurs, scientists worry about their chaos that will ensue when night falls …", intensity: 3, price: 7.00, user: sol, mode: fantasy, address: "Antonio Vázquez 80")
+the_nightfall = Dream.create(title: "The Nightfall", description: "The story is about a planet which doesn’t experience nightfall, except once in every 2,049 years, because it is normally lit by six suns. Since every human being alive will find nightfall a terrifying experience when that rare eclipse occurs, scientists worry about their chaos that will ensue when night falls …", intensity: 3, price: 7.00, user: user, mode: fantasy, address: "Antonio Vázquez 80")
 file_42 = URI.open('https://media.istockphoto.com/photos/fantastic-night-forest-picture-id1267107237?b=1&k=20&m=1267107237&s=170667a&w=0&h=X7AgOe2DYsy2Ob47MuYDRI851cg1YlTkJar2duPv-o0=')
 the_nightfall.photo.attach(io: file_42, filename: "#{the_nightfall.title}.png", content_type: 'image/png')
 
-burning_chrome = Dream.create(title: "Burning Chrome", description: "the story of how they burned Chrome, a sophisticated security system with ties to organized crime.", intensity: 2, price: 7.00, user: nicky, mode: fantasy, address: "Plaza Mayor 44")
+burning_chrome = Dream.create(title: "Burning Chrome", description: "the story of how they burned Chrome, a sophisticated security system with ties to organized crime.", intensity: 2, price: 7.00, user: user, mode: fantasy, address: "Plaza Mayor 44")
 file_43 = URI.open('https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGJ1cm5pbmclMjBmYW50YXN5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60')
 burning_chrome.photo.attach(io: file_43, filename: "#{burning_chrome.title}.png", content_type: 'image/png')
 
@@ -180,7 +181,7 @@ spaceship = Dream.create(title: "Spaceship", description: "I am with some people
 file_28 = URI.open('https://images.unsplash.com/photo-1560831214-d7f3921b9ec4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTJ8fGhhcHB5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60')
 spaceship.photo.attach(io: file_28, filename: "#{spaceship.title}.png", content_type: 'image/png')
 
-big_event = Dream.create(title: "Big Event", description: "A town is having a big public event….Two kinds of things are being prepared, like a brown wooden tray for one and a big black cylinder for the other….Everyone is getting ready, there is a happy vibe….at the end, a reward is given for a good job….some kind of treat for a kid, a small boy….He is happy….", intensity: 3, price: 9.00, user: nicky, mode: wellness, address: 'Calle de San Bernardo 13, Madrid')
+big_event = Dream.create(title: "Big Event", description: "A town is having a big public event….Two kinds of things are being prepared, like a brown wooden tray for one and a big black cylinder for the other….Everyone is getting ready, there is a happy vibe….at the end, a reward is given for a good job….some kind of treat for a kid, a small boy….He is happy….", intensity: 3, price: 9.00, user: user, mode: wellness, address: 'Calle de San Bernardo 13, Madrid')
 file_29 = URI.open('https://images.unsplash.com/photo-1509909756405-be0199881695?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aGFwcHl8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60')
 big_event.photo.attach(io: file_29, filename: "#{big_event.title}.png", content_type: 'image/png')
 
