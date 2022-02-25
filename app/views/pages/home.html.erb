@@ -1,23 +1,35 @@
-
-<div class="container-homepage">
-  <div class="row" style="height:100%">
-    <div class="col-12 col-lg-8 left-home-page">
-
-      <h1 id='home-title1'>Dream</h1>
-      <h1 id='home-title2'>Scape</h1>
-      <h3 id='home-category'>Choose your own reality. </h3>
-
-    </div>
-
-    <div class="col-12 col-lg-4 right-home-page box-wrap">
-      <% @modes.each do |mode| %>
-        <%= link_to dreams_path(mode: mode.id), class: "box" do %>
-          <%= render "pages/components/#{mode.name.downcase}" %>
-        <% end %>
+<div class= "container-homepage">
+  <div id="mySidebar" class="sidebar box-wrap">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <% @modes.each do |mode| %>
+      <%= link_to dreams_path(mode: mode.id), class: "box" do %>
+        <%= render "pages/components/#{mode.name.downcase}" %>
       <% end %>
-    </div>
+    <% end %>
+  </div>
+
+  <div id="main">
+    <h1 id='home-title1'>Dream</h1>
+    <h1 id='home-title2'>Scape</h1>
+    <button class="openbtn" id="openbtn" onclick="openNav()"><h3 id='home-category'>Choose your own reality </h3></button>
   </div>
 </div>
 
+<script>
+    /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "450px";
+      document.getElementById("main").style.marginRight = "450px";
+      document.getElementById("openbtn").style.visibility = "hidden";
+    }
 
+    /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginRight = "0";
+      document.getElementById("openbtn").style.visibility = "visible";
+    }
+</script>
 
+<%# <right-homepage></right-homepage>
+box wrap %>
