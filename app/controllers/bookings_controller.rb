@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to dream_path(@dream), notice: "You booking was created!"
     else
-      render :new
+      render "dreams/show"
     end
   end
 

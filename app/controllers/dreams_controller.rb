@@ -1,4 +1,6 @@
 class DreamsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:show,:index]
+
   before_action :set_dream, only: [:show]
   def index
     # mode_id = params[:id]
