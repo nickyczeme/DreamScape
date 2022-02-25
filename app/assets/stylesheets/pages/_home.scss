@@ -25,6 +25,7 @@
   }
 }
 
+// EDITED
 .left-home-page {
   background-image: asset-url('background.gif');
   background-size: cover;
@@ -60,17 +61,19 @@
 }
 
 #home-category {
-  color: #F7F7F7;
   font-family: 'Playfair Display', serif;
   font-weight: 400;
   font-style: italic;
   font-size: 25px;
-  padding: 20px 0px;
+  padding: 0px 0px;
   // border: 1px solid #404040;
   margin-top: 10px;
+  color: #F7F7F7;
 
 }
 
+
+// ADDED
 .right-home-page {
   background-color: #F7F7F7;
   // border-left: 1px solid #404040;
@@ -81,6 +84,12 @@
   height: 100vh;
   padding: 0px;
   // overflow: visible;
+  z-index: 99; // ADDED
+  transition: 0.5s;
+  overflow-x: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
 }
 
 .container-homepage {
@@ -164,4 +173,90 @@
   filter:blur(0px);
   opacity:1;
   // box-shadow:0 8px 20px 0px rgba(0,0,0,0.125);
+}
+
+// THIIIIISSSSSSSSS
+
+/* The sidebar menu */
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 999; /* Stay on top */
+  top: 0;
+  right: 0;
+  background-color: #F7F7F7; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 30px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align:center;
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 32px 8px 8px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  font-size: 36px;
+  margin-right: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 7px 24px;
+  border: 1px solid #F7F7F7;
+  border-radius: 90px;
+  margin-top: 30px;
+  color: #F7F7F7;
+
+}
+
+.openbtn:hover {
+  background-color: #F7F7F7;
+    #home-category{
+      color: rgb(196, 62, 91);
+      //color: #404040;
+    }
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-right .5s; /* If you want a transition effect */
+  padding: 20px;
+  background-image: asset-url('background.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  padding: 4% 10% 15% 8%;
+  align-items: center;
+  height: 100vh;
+
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
 }
