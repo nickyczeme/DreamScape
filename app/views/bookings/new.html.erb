@@ -1,9 +1,10 @@
 <div class='background'>
+  <h1>New booking</h1>
   <div class="container" data-controller="flatpickr">
     <div class = "new-form-div">
       <%= simple_form_for [@dream, @booking], html: { class: "new-form"} do |f|%>
         <%= f.input :starting_date, as: :string,label: false, required: false, input_html: {class: "datepicker d-none"} %>
-        <%= f.button :submit, "Book", class: 'btn btn-outline-secondary' %>
+        <%= f.button :submit, "Book", class: 'button-our' %>
       <%end%>
     </div>
   </div>
