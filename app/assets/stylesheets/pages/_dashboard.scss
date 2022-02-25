@@ -7,7 +7,7 @@
 }
 
 .created{
-  background-image: linear-gradient(rgba(175, 87, 134, 0.3), rgba(0,0,0,0.3)), url() !important;
+  // background-image: linear-gradient(rgba(175, 87, 134, 0.3), rgba(0,0,0,0.3)), url() !important;
   background-size: cover;
   background-position: center;
   height: 600px;
@@ -21,7 +21,7 @@
 }
 
 .booked{
-  background-image: linear-gradient(rgba(175, 87, 134, 0.3), rgba(0,0,0,0.3)), url() !important;
+  // background-image: linear-gradient(rgba(175, 87, 134, 0.3), rgba(0,0,0,0.3)), url() !important;
   background-size: cover;
   background-position: center;
   height: 600px;
@@ -55,4 +55,22 @@ a{
 
 a:hover{
   color:#C43E5A;
+}
+
+.cards-dash{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  flex-grow: 1;
+  margin: auto;
+  justify-content: space-around;
+  a {
+    text-decoration: none;
+  }
+  margin-bottom: 10px;
+}
+
+
+.booking_snipet {
+  font-size: 10px;
 }
