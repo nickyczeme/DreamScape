@@ -3,7 +3,7 @@
 
 .navbar-dream {
   justify-content: space-between;
-  background: transparent;
+  background: #F7F7F7;
 }
 
 .navbar-dream .navbar-collapse {
@@ -17,14 +17,14 @@
 //comment
 
 .navbar-lewagon {
-  background-color: transparent;
+  background-color: #F7F7F7;
   transition: 0.5s background-color ease;
 }
 
 .navbar{
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 999;
   width: 100%;
   padding: 0px !important;
   height: 9vh;
@@ -53,6 +53,7 @@ li.nav-item{
 
 .dropdown-menu {
   border: 1px solid #404040;
+  background-color: #F7F7F7 !important;
 }
 
 
@@ -62,7 +63,7 @@ li.nav-item{
 
 .new-dream {
   font-family: 'Playfair Display', serif;
-  background-color: transparent;
+  background-color: #F7F7F7;
   border: 1px solid #404040;
   color: #404040;
   padding: 10px 46px;
