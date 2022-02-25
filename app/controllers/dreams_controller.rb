@@ -38,7 +38,6 @@ class DreamsController < ApplicationController
   def create
     @dream = Dream.new(dream_params)
     @dream.user = current_user
-    raise
     if @dream.save
       redirect_to dream_path(@dream)
     else
