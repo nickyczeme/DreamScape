@@ -19,7 +19,7 @@
         </div>
         <div class='dream-info-item'>
           <h3>Price</h3>
-          <p><%= @dream.price %><i class="fa-solid fa-euro-sign" style='color: black;font-size: 14px;'></i></p>
+          <p><%= number_with_precision(@dream.price, precision: 2) %><i class="fa-solid fa-euro-sign" style='color: black;font-size: 14px;'></i></p>
         </div>
       </div>
       <br>
