@@ -26,8 +26,11 @@
 }
 
 h3 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
   font-size: 15px;
   color: #404040;
+
 }
 
 .mapboxgl-popup-content p{
@@ -58,4 +61,8 @@ h3 {
   width: 100%;
   object-fit: cover;
   height: 30vh;
+}
+
+.flatpickr-calendar {
+  background-color: transparent !important;
 }
