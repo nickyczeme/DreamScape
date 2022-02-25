@@ -6,7 +6,7 @@
     <%if @user.booked_dreams.present? %>
       <div class='booked'>
         <h2 style="text-align: center">Dreams you have booked</h2>
-        <ul>
+        <div class="cards-dash">
           <%@user.bookings.each do |booking|%>
             <%= link_to dream_path(booking.dream) do %>
               <div class="card card-dash">
@@ -14,19 +14,23 @@
                   <%= cloudinary_picture(booking.dream) %>
                   <div class="card__caption">
                     <h2 class="card__tilte"><%= booking.dream.title %></h2>
-                    <div class='content-info-hover'>
-                      <p>Starting date: </p>
-                      <%=booking.starting_date%>
-                      <p>Ending date: </p>
-                      <%=booking.ending_date%>
+                    <div class='content-info-hover card__snippet'>
+                      <div>
+                        <p>Starting date: <%=booking.starting_date%> </p>
+                        <br>
+                        <p>Ending date: <%=booking.ending_date%> </p>
+                      </div>
                     </div>
                   </div>
-
+                </div>
               </div>
             <% end %>
           <% end %>
-          </ul>
+        </div>
       </div>
+
+
+
     <%else%>
       <div class='booked' >
         <h2 style="text-align: center">Dreams you have booked</h2>
@@ -51,7 +55,7 @@
 
 
         <%# <ul style="list-style-type:none; text-align:center"> %>
-          <%# <% @user.dreams.each do |dream| %> %>
+          <%# <% @user.dreams.each do |dream| %>
             <%# <li> %>
               <%# <%=link_to dream.title, dream_path(dream)</li> %>
           <%# <% end %>

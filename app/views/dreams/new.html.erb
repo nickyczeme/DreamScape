@@ -1,17 +1,25 @@
 
-<%# <div class='background'> %>
-  <div class="container">
-    <h1 id="new-form-title">New dream</h1>
-    <div class = "new-form-div">
-      <%= simple_form_for @dream, html: { class: "new-form"} do |f| %>
-        <%= f.input :title, label: 'Enter your title please', error: 'Title is mandatory, please specify one' %>
-        <%= f.input :description, label: 'Enter your description please', error: 'Description is mandatory, please specify one' %>
-        <%= f.input :intensity, collection: 1..5, label: 'Select intensity level', error: 'Intensity is mandatory, please specify one' %>
-        <%= f.input :price, label: 'Enter the price of the dream', error: 'Price is mandatory, please specify one' %>
-        <%= f.input :photo, as: :file %>
-        <%= f.association :mode, include_blank: false %>
-        <%= f.button :submit, 'Create dream', class: 'search-button'%>
-      <% end %>
+
+<%# <div class="container"> %>
+  <div class="row" style="height:100%">
+    <div class="col-8">
+      <div class = "new-form-div mr-3">
+        <h1 id="new-form-title">New dream</h1>
+        <%= simple_form_for @dream, html: { class: "new-form"} do |f| %>
+          <%= f.input :title, label: 'Enter your title please', error: 'Title is mandatory, please specify one' %>
+          <%= f.input :description, label: 'Enter your description please', error: 'Description is mandatory, please specify one' %>
+          <%= f.input :intensity, collection: 1..5, label: 'Select intensity level', error: 'Intensity is mandatory, please specify one' %>
+          <%= f.input :price, label: 'Enter the price of the dream', error: 'Price is mandatory, please specify one' %>
+          <%= f.input :photo, as: :file %>
+          <%= f.association :mode, include_blank: false %>
+          <%= f.button :submit, 'Create dream', class: 'search-button'%>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <%= image_tag "background.gif", style: 'width: 100%; height: 100vh' %>
+
     </div>
   </div>
 <%# </div> %>
