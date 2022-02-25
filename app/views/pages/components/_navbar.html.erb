@@ -2,9 +2,9 @@
   <div class="container-fluid" style="height:100%">
     <%= link_to root_path, class: "navbar-brand", style:"height:100%" do %>
     <% if current_page?(root_path) || controller_name == "dreams" && action_name == "snewhow"%>
-      <%= render 'pages/components/logo2' %>
-    <% else %>
       <%= render 'pages/components/logo' %>
+    <% else %>
+      <%= render 'pages/components/logo2' %>
     <% end %>
     <% end %>
 
@@ -35,7 +35,7 @@
           <% end %>
           <% unless (current_page?(root_path)) %>
             <li class="nav-item dropdown">
-              <i class="fa-solid fa-user avatar dropdown-toggle" id= "navbarDropdown" data-bs-toggle= "dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;margin-top:10px;"></i>
+              <i class="fa-solid fa-user avatar dropdown-toggle" id= "navbarDropdown" data-bs-toggle= "dropdown" aria-haspopup="true" aria-expanded="false" style="color:#404040; margin-top:10px;"></i>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="background-color:transparent;">
                 <% if user_signed_in?%>
                   <%= link_to "Log out", destroy_user_session_path ,method: :delete, class: "dropdown-item" %>
