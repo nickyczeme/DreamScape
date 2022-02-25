@@ -1,9 +1,13 @@
+h1 {
+  border-bottom: 1px solid #404040;
+}
+
 .dash{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
   padding: 5px;
-  margin-top: 30px;
+  margin-top: 0px;
 }
 
 .created{
@@ -14,10 +18,13 @@
   margin-top: 12px;
   color: white;
   font-size: 24px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  // text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   // box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   padding: 0 10px;
+  p {
+    font-size: 17px;
+  }
 }
 
 .booked{
@@ -28,22 +35,27 @@
   margin-top: 12px;
   color: white;
   font-size: 24px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  // text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   // box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   padding: 0 10px;
   font-family: 'Playfair Display', serif;
+  p {
+    font-size: 17px;
+  }
 }
 h1{
   font-family: 'Playfair Display', serif;
-  padding: 5px;
+  padding: 5px 5px 40px 5px;
   font-size: 60px;
+  font-style: italic;
 }
 h2{
   font-family: 'Playfair Display', serif;
   padding: 5px;
   margin-top: 10px;
   font-weight: 500;
+
 
 }
 // body{
