@@ -3,8 +3,8 @@
     <div class="img-show col-10 p-3">
       <%= cloudinary_picture(@dream)%>
     </div>
-    <div class="col-5 p-3" style="background-color:black">
-      <h2>Book <%=@dream.title%></h2>
+    <div class="col-5 p-3" style="background-color:#F7F7F7">
+      <h2 style="color: #404040"><%=@dream.title%></h2>
       <div class='dream-info'>
         <div class='dream-info-item'>
           <h3>Category</h3>
@@ -33,7 +33,7 @@
                   data-mapbox-markers-value="<%= @markers.to_json %>"
                   data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
       </div>
-    <div class="col-5 p-3" style="background-color:black">
+    <div class="col-5 p-3" style="background-color:#F7F7F7">
       <div class="container-calendar" data-controller="flatpickr">
         <div class = "new-form-div-map">
           <%= simple_form_for [@dream, @booking], html: { class: "new-form-map"} do |f|%>
