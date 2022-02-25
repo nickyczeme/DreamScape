@@ -36,7 +36,6 @@ falling.photo.attach(io: file, filename: "#{falling.title}.png", content_type: '
 
 
 being_chased = Dream.create(title: "Being Chased", description: "I was being chased by somebody or something and running from building to building and then I kind of melted into the second dream where I had my dog Pinto in his stroller and we were meeting my family for a Christmas show. We took an elevator to the top floor of what looks like the space needle in Seattle and we sat down at the end of this crescent shaped couch. I kind of had a bad view of the play or festivities, but then an unattractive guy sat down next to me. He was black and tall and wearing a gray sweater and jeans and boots.", intensity: 5, price: 8, user: fanny, mode: nightmares, address: "Strohgasse 21A, Vienna")
-
 file_1 = URI.open('https://images.unsplash.com/photo-1519376108558-7b6471e87264?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTc3fHxkYXJrfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60')
 being_chased.photo.attach(io: file_1, filename: "#{being_chased.title}.png", content_type: 'image/png')
 
@@ -44,15 +43,15 @@ death = Dream.create(title: "Death", description: "I was being tied up along wit
 file_2 = URI.open('https://images.unsplash.com/photo-1531257114315-24a694751517?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTYwfHxkYXJrfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60')
 death.photo.attach(io: file_2, filename: "#{death.title}.png", content_type: 'image/png')
 
-feeling_lost = Dream.create(title: "Feeling Lost", description: "Again, there was a huge boulder. I was climbing it with the child of the previous [dream]. Though I thought of how easy it would be to slip, it was really not all that dangerous. I took a small rock and let it go, thinking that it would tumble down, but I saw that it was not steep and the rock came to a rest at one side without falling down. Then there was a rock [shaped] like a log at the seashore. Its skin was smooth and gave an excellent footing. I walked and played all over the top.", intensity: 3, price: 7, user: sol, mode: nightmares, address: "Hohenlohehof 1, Vienna")
+feeling_lost = Dream.create(title: "Feeling Lost", description: "Again, there was a huge boulder. I was climbing it with the child of the previous [dream]. Though I thought of how easy it would be to slip, it was really not all that dangerous. I took a small rock and let it go, thinking that it would tumble down, but I saw that it was not steep and the rock came to a rest at one side without falling down. Then there was a rock [shaped] like a log at the seashore. Its skin was smooth and gave an excellent footing. I walked and played all over the top.", intensity: 3, price: 7, user: sol, mode: nightmares, address: "Calle de San Bernardo 13, Madrid")
 file_3 = URI.open('https://images.pexels.com/photos/3304855/pexels-photo-3304855.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500')
 feeling_lost.photo.attach(io: file_3, filename: "#{feeling_lost.title}.png", content_type: 'image/png')
 
-feeling_trapped = Dream.create(title: "Feeling Trapped", description: "I was walking home from a fun night out and suddently my feet where stuck to the floor and I could not move anymore.", intensity: 2, price: 5, user: nicky, mode: nightmares, address: "Calle Modesto Lafuente 4, 28010 Madrid")
+feeling_trapped = Dream.create(title: "Feeling Trapped", description: "I was walking home from a fun night out and suddently my feet where stuck to the floor and I could not move anymore.", intensity: 2, price: 5, user: nicky, mode: nightmares, address: "Calle de San Bernardo 13, Madrid")
 file_4 = URI.open('https://images.unsplash.com/photo-1487029752779-a0c17b1f5ec9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTIzfHxkYXJrfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60')
 feeling_trapped.photo.attach(io: file_4, filename: "#{feeling_trapped.title}.png", content_type: 'image/png')
 
-beeing_attacked = Dream.create(title: "Beeing Attacked", description: "The man was already staring for me for hours, I noticed that more and more people keft the subway and suddenly I was all alone with the man", intensity: 3, price: 5.5, user: fanny, mode: nightmares, address: "Paseo General Martinez Campos 37, 28010 Madrid")
+beeing_attacked = Dream.create(title: "Beeing Attacked", description: "The man was already staring for me for hours, I noticed that more and more people keft the subway and suddenly I was all alone with the man", intensity: 3, price: 5.5, user: fanny, mode: nightmares, address: "Calle de Bernardo 13, Madrid")
 file_5 = URI.open('https://images.unsplash.com/photo-1489708631777-b35c5e75d4c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTI1fHxkYXJrfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60')
 beeing_attacked.photo.attach(io: file_5, filename: "#{beeing_attacked.title}.png", content_type: 'image/png')
 
@@ -116,14 +115,14 @@ the_wraith.photo.attach(io: file_19, filename: "#{the_wraith.title}.png", conten
 
 
 the_fairytale = Dream.create(title: "The Fairytale", description: "I am lounging on wooden stairs in a fairytale-like location. There are two huge houses made of wood, one on either side of the long flight of stairs on which we sit. Near us is a patio with a huge tree. Nita is sitting next to me, and Jason tells me to look at the bird in the tree. I look into the branches and high up in the center I see a wonderful birdhouse like a beautiful old-fashioned birdcage. There are three birds, one large one that is very beautiful at the top of the birdhouse. The scene is so lovely I am near tears. I lay my head on one of the wooden steps and tell Nita I so want to live in this house.", intensity: 3, price: 7, user: mojito, mode: fantasy, address: "Plaza del Rey No. 1, 28004 Madrid")
-file_36 = URI.open('https://images.unsplash.com/photo-1463109598173-3864231fade5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzh8fGZhaXJ5dGFsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60')
+file_36 = URI.open('https://files.slack.com/files-pri/T02NE0241-F0351432T4H/shutterstock_552162193.jpg')
 the_fairytale.photo.attach(io: file_36, filename: "#{the_fairytale.title}.png", content_type: 'image/png')
 
 the_smallest_dragonboy = Dream.create(title: "The Smallest Dragonboy", description: "It came while he was out in the city; the monster from the mountains. The wraith slaughtered his village, killed his father and stole his future. He has nothing left. Nothing but vengeance. Leading a small party of wrathful survivors into the beast’s frozen home, it soon becomes clear that the fight isn’t against the creature they hunt, it is for their very survival. One of the fantasy short stories with a deeper meaning, will it resonate with you like it has other readers?", intensity: 3, price: 3, user: barbie, mode: fantasy, address: "Ctra. de Siles 74")
-file_37 = URI.open('https://images.unsplash.com/photo-1633501637812-7e2058fddcc8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGRyYWdvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60')
+file_37 = URI.open('https://cdn.mos.cms.futurecdn.net/7tQYE6Hrvz59pHFmSTBbNX.jpg')
 the_smallest_dragonboy.photo.attach(io: file_37, filename: "#{the_smallest_dragonboy.title}.png", content_type: 'image/png')
 
-the_city_born_great = Dream.create(title: "The City Born Great", description: "New York. In this inventive tale, New York City has grown old enough that it is time for it to be 'born' — but only if one reluctant midwife can keep its ancient enemies at bay.", intensity: 3, price: 7, user: barbie, mode: fantasy, address: "Rua da Rapina 36")
+the_city_born_great = Dream.create(title: "The City Born Great", description: "New York. In this inventive tale, New York City has grown old enough that it is time for it to be 'born' — but only if one reluctant midwife can keep its ancient enemies at bay.", intensity: 3, price: 7, user: barbie, mode: fantasy, address: "Calle de San Bernardo 13, Madrid")
 file_38 = URI.open('https://media.istockphoto.com/photos/amazing-island-with-grove-floating-in-the-air-picture-id623897682?b=1&k=20&m=623897682&s=170667a&w=0&h=y50tslVLAMJFSgpgDisIK-Jm5RozEAiqlutLkpQYnGo=')
 the_city_born_great.photo.attach(io: file_38, filename: "#{the_city_born_great.title}.png", content_type: 'image/png')
 
@@ -131,9 +130,9 @@ seasons_of_glass = Dream.create(title: "Seasons of Glass", description: "Tabitha
 file_39 = URI.open('https://images.unsplash.com/photo-1464809142576-df63ca4ed7f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njd8fHRocm9uJTIwZmFudGFzeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60')
 seasons_of_glass.photo.attach(io: file_39, filename: "#{seasons_of_glass.title}.png", content_type: 'image/png')
 
-help_me_follow_my_sister = Dream.create(title: "Help Me Follow My Sister", description: "", intensity: 3, price: 15, user: barbie, mode: fantasy, address: "Pascual Yunquera 60")
+help_me_follow = Dream.create(title: "Help Me Follow", description: "", intensity: 3, price: 15, user: barbie, mode: fantasy, address: "Pascual Yunquera 60")
 file_40 = URI.open('https://images.unsplash.com/photo-1560942485-b2a11cc13456?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHRocm9uJTIwZmFudGFzeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60')
-help_me_follow_my_sister.photo.attach(io: file_40, filename: "#{help_me_follow_my_sister.title}.png", content_type: 'image/png')
+help_me_follow.photo.attach(io: file_40, filename: "#{help_me_follow.title}.png", content_type: 'image/png')
 
 the_time_machine = Dream.create(title: "The Time Machine", description: "He ends up in the world of AD 802,701, in a London that has been transformed into a vast garden, and where humankind has evolved into two distinct subspecies: the above-ground Eloi and the sinister subterranean Morlocks …", intensity: 4, price: 5, user: barbie, mode: fantasy, address: "Valadouro 77")
 file_41 = URI.open('https://images.unsplash.com/photo-1508924379194-91ff8ad10091?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTExfHx0aW1lJTIwbWFzaGluZSUyMGZhbnRhc3l8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60')
@@ -166,13 +165,13 @@ beach_day = Dream.create(title: "Beach Day", description: "I had a dream I was a
 file_24 = URI.open('https://images.unsplash.com/photo-1551523577-433756fd559e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aGFwcHklMjBiZWFjaHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60')
 beach_day.photo.attach(io: file_24, filename: "#{beach_day.title}.png", content_type: 'image/png')
 
-seeing_your_grandmother_once_more = Dream.create(title: "Seeing Your Grandmother Once More", description: "i was dreaming that I was visiting england and I was there with my grandmother (who has passed away) I was very happy being with her and we went to the theater and were having a wonderful time", intensity: 3, price: 5.5, user: nicky, mode: wellness, address: 'Pasadizo de San Ginés, 5, 28013 Madrid')
+seeing_your_grandmother = Dream.create(title: "Seeing Your Grandmother", description: "i was dreaming that I was visiting england and I was there with my grandmother (who has passed away) I was very happy being with her and we went to the theater and were having a wonderful time", intensity: 3, price: 5.5, user: nicky, mode: wellness, address: 'Pasadizo de San Ginés, 5, 28013 Madrid')
 file_25 = URI.open('https://images.unsplash.com/photo-1498673394965-85cb14905c89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGhhcHB5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60')
-seeing_your_grandmother_once_more.photo.attach(io: file_25, filename: "#{seeing_your_grandmother_once_more.title}.png", content_type: 'image/png')
+seeing_your_grandmother.photo.attach(io: file_25, filename: "#{seeing_your_grandmother.title}.png", content_type: 'image/png')
 
-receiving_flowers_from_your_husband = Dream.create(title: "Receiving Flowers From Your Husband", description: "I dreamt that my husband surprised me with a plant. It had one exotic red flower that rose up on a long stem. I was very pleased that he had thought of me and my love of flowers.", intensity: 2, price: 3.5, user: mojito, mode: wellness, address: 'C. del Caballero de Gracia 28013 Madrid')
+receiving_flowers = Dream.create(title: "Receiving Flowers", description: "I dreamt that my husband surprised me with a plant. It had one exotic red flower that rose up on a long stem. I was very pleased that he had thought of me and my love of flowers.", intensity: 2, price: 3.5, user: mojito, mode: wellness, address: 'C. del Caballero de Gracia 28013 Madrid')
 file_26 = URI.open('https://images.unsplash.com/photo-1587546758950-bafc86850ae0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjc4fHxoYXBweXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60')
-receiving_flowers_from_your_husband.photo.attach(io: file_26, filename: "#{receiving_flowers_from_your_husband.title}.png", content_type: 'image/png')
+receiving_flowers.photo.attach(io: file_26, filename: "#{receiving_flowers.title}.png", content_type: 'image/png')
 
 cottage_on_the_beach = Dream.create(title: "Cottage On The Beach", description: "I dreamt that I was living at the beach and I had left my husband and daughter and had a little cottage on the beach. In my dream I was walking down the beach and i was happy and content.", intensity: 5, price: 1.5, user: fanny, mode: wellness, address: 'C. de Sta. Ana, 29, 28005 Madrid')
 file_27 = URI.open('https://images.unsplash.com/photo-1518560051567-9e648e0142f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTk1fHxoYXBweXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60')
@@ -182,7 +181,7 @@ spaceship = Dream.create(title: "Spaceship", description: "I am with some people
 file_28 = URI.open('https://images.unsplash.com/photo-1560831214-d7f3921b9ec4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTJ8fGhhcHB5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60')
 spaceship.photo.attach(io: file_28, filename: "#{spaceship.title}.png", content_type: 'image/png')
 
-big_event = Dream.create(title: "Big Event", description: "A town is having a big public event….Two kinds of things are being prepared, like a brown wooden tray for one and a big black cylinder for the other….Everyone is getting ready, there is a happy vibe….at the end, a reward is given for a good job….some kind of treat for a kid, a small boy….He is happy….", intensity: 3, price: 9, user: nicky, mode: wellness, address: 'C. de Martín de Vargas, 7-I, n. 5, 28005 Madrid')
+big_event = Dream.create(title: "Big Event", description: "A town is having a big public event….Two kinds of things are being prepared, like a brown wooden tray for one and a big black cylinder for the other….Everyone is getting ready, there is a happy vibe….at the end, a reward is given for a good job….some kind of treat for a kid, a small boy….He is happy….", intensity: 3, price: 9, user: nicky, mode: wellness, address: 'Calle de San Bernardo 13, Madrid')
 file_29 = URI.open('https://images.unsplash.com/photo-1509909756405-be0199881695?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aGFwcHl8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60')
 big_event.photo.attach(io: file_29, filename: "#{big_event.title}.png", content_type: 'image/png')
 
