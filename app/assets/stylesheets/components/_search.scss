@@ -35,6 +35,29 @@
   height: 38px;
 }
 
+.button-book {
+  font-family: 'Playfair Display', serif;
+  background-color: #404040;
+  border: 1px solid #404040 !important;
+  color: #F7F7F7;
+  padding: 0px 46px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  // font-weight: bold;
+  height: 38px;
+}
+
+.button-book:hover, {
+  font-family: 'Playfair Display', serif;
+  background-color: #F7F7F7;
+  border: 1px solid #404040;
+  color: #404040;
+  transition: 1000ms;
+}
+
+
 .button-our {
   font-family: 'Playfair Display', serif;
   background-color: transparent;

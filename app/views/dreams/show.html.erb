@@ -13,13 +13,14 @@
         <div class='dream-info-item'>
           <h3>Intensity</h3>
           <p>
-          <% @dream.intensity.to_i.times do%><i class="fa-solid fa-circle" style='white'></i> <% end %>
-          <% (5 - @dream.intensity.to_i).times do%><i class="fa-regular fa-circle" style='white'></i> <% end %>
+          <% @dream.intensity.to_i.times do%><i class="fa-solid fa-circle" style='color: #404040'></i> <% end %>
+          <% (5 - @dream.intensity.to_i).times do%><i class="fa-regular fa-circle" style='color: #404040'></i> <% end %>
           </p>
         </div>
         <div class='dream-info-item'>
           <h3>Price</h3>
-          <p><%= number_with_precision(@dream.price, precision: 2) %><i class="fa-solid fa-euro-sign" style='color: black;font-size: 14px;'></i></p>
+
+          <p><%= number_with_precision(@dream.price, precision: 2) %><i class="fa-solid fa-euro-sign" style='color:  #404040;font-size: 14px;'></i></p>
         </div>
       </div>
       <br>
@@ -38,7 +39,7 @@
         <div class = "new-form-div-map">
           <%= simple_form_for [@dream, @booking], html: { class: "new-form-map"} do |f|%>
             <%= f.input :starting_date, as: :string, label: false, required: false, input_html: {class: "datepicker d-none"} %>
-            <%= f.button :submit, "Book", class: 'search-button' %>
+            <%= f.button :submit, "Book", class: 'button-book' %>
           <%end%>
         </div>
       </div>
