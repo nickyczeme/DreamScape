@@ -1,6 +1,6 @@
 // .card-hover {
 //   .title-default {
-//     color: black;
+//     color: #404040;
 //   }
 //   img {
 //     filter: blur(8px);
@@ -28,7 +28,7 @@
 // }
 
 // .card-default {
-//   color:black;
+//   color:#404040;
 //   .show-hover {
 //     display: none;
 //   }
@@ -36,7 +36,7 @@
 //     display: initial;
 //   }
 //   .title-default {
-//     // color: black; QUE QUEDA MEJOR???
+//     // color: #404040; QUE QUEDA MEJOR???
 
 //   }
 // }
@@ -70,7 +70,7 @@
 //   font-size: 20px;
 //   font-weight: bold;
 //   margin: 0;
-//   color: white;
+//   color: #F7F7F7;
 //   font-family: 'karla', sans-serif !important;
 //   font-weight: 300 !important;
 // }
@@ -122,8 +122,9 @@ $desktop: 1024px;
 .card {
 	width: 100%;
 	// margin: 10px;
-	background-color: white;
+	background-color: #F7F7F7;
 	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+  border: 0px solid transparent !important;
 
 	&:hover {
 		.card__caption {
@@ -184,7 +185,7 @@ $desktop: 1024px;
 		top: 50%;
 		z-index: 1;
 		padding: 0 20px;
-		color: white;
+		color: #F7F7F7;
 		transform: translateY(-50%);
 		text-align: center;
 		transition: .3s;
@@ -203,10 +204,11 @@ $desktop: 1024px;
 		font-family: 'Playfair Display', serif;
 		font-size: 23px;
 		line-height: 28px;
-		text-shadow: 0px 1px 5px black;
+		text-shadow: 0px 1px 5px #404040;
 		text-overflow: ellipsis;
     -webkit-line-clamp: 3;
 		-webkit-box-orient: vertical;
+    // text-shadow: -1px 0 #404040, 0 1px #404040, 1px 0 #404040, 0 -#404040 #404040;
 	}
 
 	&__snippet {
@@ -230,8 +232,8 @@ $desktop: 1024px;
 	&__button {
 		display: inline-block;
 		padding: 10px 20px;
-		color: white;
-		border: 1px solid white;
+		color: #F7F7F7;
+		// border: 1px solid #F7F7F7;
 		font-family: 'Roboto', sans-serif;
 		font-size: 12px;
 		text-transform: uppercase;
@@ -239,9 +241,8 @@ $desktop: 1024px;
 		transition: .3s;
 
 		&:hover {
-			color: black;
-			background-color: white;
+			color: #404040;
+			background-color: #F7F7F7;
 		}
 	}
 }
-

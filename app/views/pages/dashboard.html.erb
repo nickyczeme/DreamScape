@@ -1,11 +1,11 @@
 <div class='container' style="color:white">
-  <h1 style="color:white">Your dashboard</h1>
+  <h1 style="color:#404040; text-align:center">Dashboard</h1>
 
   <div class='dash'>
 
     <%if @user.booked_dreams.present? %>
       <div class='booked'>
-        <h2 style="text-align: center">Dreams you have booked</h2>
+        <h2 style="text-align: center">Booked</h2>
         <div class="cards-dash">
           <%@user.bookings.each do |booking|%>
             <%= link_to dream_path(booking.dream) do %>
@@ -33,14 +33,14 @@
 
     <%else%>
       <div class='booked' >
-        <h2 style="text-align: center">Dreams you have booked</h2>
+        <h2 style="text-align: center">Booked</h2>
         <p style="text-align: center">You don't have any bookings</p>
       </div>
     <% end %>
 
     <%if @user.dreams.present? %>
       <div class='created'>
-        <h2 style="text-align:center">Dreams you created</h2>
+        <h2 style="text-align:center">Created</h2>
 <%# empieza %>
         <div class="cards-dash">
                 <% @user.dreams.each do |dream| %>
@@ -64,7 +64,7 @@
       </div>
       <%else%>
       <div class='created' >
-        <h2 style="text-align: center">Dreams you created</h2>
+        <h2 style="text-align: center">Created</h2>
         <p style="text-align: center">You haven't created any dreams</p>
       </div>
     <% end %>
