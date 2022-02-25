@@ -2,9 +2,9 @@
   <div class="container-fluid" style="height:100%">
     <%= link_to root_path, class: "navbar-brand", style:"height:100%" do %>
     <% if current_page?(root_path) || controller_name == "dreams" && action_name == "snewhow"%>
-      <%= render 'pages/components/logo2' %>
-    <% else %>
       <%= render 'pages/components/logo' %>
+    <% else %>
+      <%= render 'pages/components/logo2' %>
     <% end %>
     <% end %>
 
