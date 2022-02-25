@@ -29,7 +29,7 @@
           <% unless (controller_name == "dreams" && action_name == "new") || (current_page?(root_path)) %>
             <%if user_signed_in?%>
               <li class="nav-item">
-                <%= link_to "New dream", new_dream_path, class: "nav-link new-dream" %>
+                <%= link_to "New dream", new_dream_path, class: "search-button" %>
               </li>
             <%end%>
           <% end %>
