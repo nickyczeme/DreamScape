@@ -35,10 +35,16 @@
   font-family: 'Playfair Display', serif;
   font-weight: 400;
   // font-style: italic;
+  // background-color: #F7F7F7;
 }
+
+
 
 li.nav-item{
   padding: 10px;
+}
+li .search-button {
+  background-color: #F7F7F7
 }
 
 .navbar-dream .navbar-brand img{
