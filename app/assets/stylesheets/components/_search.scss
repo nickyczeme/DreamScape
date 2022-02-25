@@ -21,7 +21,7 @@
 //   height: 38px;
 //
 
-.search-button,  {
+.search-button {
   font-family: 'Playfair Display', serif;
   background-color: transparent;
   border: 1px solid #404040 !important;
@@ -40,20 +40,21 @@
   background-color: transparent;
   border: 1px solid #404040;
   color: #404040;
-  // padding: 0px 46px;
+  padding: 5px 46px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   // font-weight: bold;
-  height: 38px;
+  height: fit-content;
+  margin-top: 10px;
 }
 
 .button-our:hover {
   font-family: 'Playfair Display', serif;
-  background-color: #F7F7F7;
-  border: 1px solid #404040;
-  color: #404040;
+  background-color: #404040;
+  border: 1px solid #F7F7F7;
+  color: #F7F7F7;
   transition: 1000ms;
 }
 .search-button:hover, {
